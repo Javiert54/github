@@ -1,0 +1,29 @@
+<!-- InicioProceso
+Escribir “escribe el importe de la compra”
+Leer importe //Int
+Escribir “Introduce el mes”
+Leer mes // String
+//Si el mes es octubre, se aplicará el descuento
+Si (mes=”octubre”) Entonces
+total&lt;-importe*0.85
+Sino
+total&lt;-importe
+FinSi
+Escribir total
+FinProceso -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="importe compra">Importe de la compra: <input id="importe" type="number">€</label>
+    <label for="mes">Mes: <input id="mes" type="text"></label> 
+    <button onclick="descuentos()">Submit</button> 
+    <script src="index.js"></script>
+</body>
+</html>
