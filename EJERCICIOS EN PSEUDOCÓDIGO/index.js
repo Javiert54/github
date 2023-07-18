@@ -22,6 +22,9 @@ function operar() {
     var primer = Number(document.getElementById("primer").value);
     var segun = Number(document.getElementById("segun").value);
 
-    console.log(primer + segun);
+    console.log("suma: "+(primer + segun));
+    console.log("resta: "+ (primer-segun));
+    console.log("multiplicación: "+(primer*segun));
+    console.log("división: "+(primer/segun));
 
 }
