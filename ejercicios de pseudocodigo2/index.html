@@ -1,0 +1,26 @@
+<!-- InicioProceso
+Escribir &quot;Introduce el numero de niños&quot;
+Leer numero_niños
+Escribir &quot;Introduce el numero de niñas&quot;
+Leer numero_niñas
+//calculamos el porcentaje
+porcentaje_niños&lt;-numero_niños*100/(numero_niños+numero_niñas)
+porcentaje_niñas&lt;-100-porcentaje_niños
+Escribir &quot;Hay un &quot; porcentaje_niños &quot; % de niños
+Escribir &quot;Hay un &quot; porcentaje_niñas &quot; % de niñas&quot;
+FinProceso -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="numero de niños">Introduce el número de niños</label><input id="niños" type="number">
+    <label for="numero de niñas">Introduce el número de niñas</label><input id="niñas" type="number">
+    <button onclick="porcent()">calc</button>
+    <script src="index.js"></script>
+</body>
+</html>
