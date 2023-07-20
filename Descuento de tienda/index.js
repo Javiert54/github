@@ -11,10 +11,10 @@
 // FinSi
 // Escribir total
 // FinProceso
-var mes=document.getElementById("mes").value; //Leemos el mes
+
 function descuentos(){
 	var total=Number(document.getElementById("importe").value); //Hacemos que la variable "total" sea sobre la que escribimos directamente, para ahorrarnos una variable
-
+	var mes=document.getElementById("mes").value; //Leemos el mes
 	switch(mes){
 
 		case "octubre": //Si el mes es octubre...
@@ -48,7 +48,7 @@ function descuentos(){
 
 
 
-	
+
 	// switch (expr) {
 	// 	case 'octubre':
 	// 	  console.log('El kilogramo de naranjas cuesta $0.59.');
