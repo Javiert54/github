@@ -8,6 +8,7 @@ if(username=="Admin"){
         alert("Cancelado");
     }else{
         alert("Incorrecta");
+        
     }
 
 }else if(username==""){
