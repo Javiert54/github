@@ -43,7 +43,7 @@ function descuentos(){
 			total*=1;
 	}
 	alert("Dinero a pagar: "+total+"€");
-	debugger;
+
 
 
 

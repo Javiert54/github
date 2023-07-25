@@ -1,5 +1,5 @@
 var intentos =3;
-function verify(){
+function verify(intentos){
   // Ejecutaremos el código cada vez que se pulse el botón de verificar
   if(intentos>0){
     var clave= document.getElementById("clave").value;
@@ -14,4 +14,9 @@ function verify(){
       
     }
   }
+}
+function refresh(){
+  var intentos = 3;
+  verify(intentos);
+  console.log(intentos);
 }

@@ -6,9 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="clave">Introduzca la clave: </label><input id="clave" type="text">
-    <button onclick="verify()">verify</button>
-    <button onclick="refresh()">Refresh</button>
+    <form action="">
+        <textarea name="texto" id="input" cols="30" rows="5"></textarea>
+    </form>
+    <button onclick="palabras()">submit</button>
+    <div id="answer"></div>
+
     <script src="index.js"></script>
 </body>
 </html>
