@@ -1,0 +1,39 @@
+* {
+    margin: auto;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.exterior {
+    background-color: grey;
+    border-radius: 15%;
+    width: 20em;
+    height: 15em;
+    text-align: center;
+    display: inline-block;
+    margin: 0.5em;
+    padding: 1em;
+    ;
+}
+
+.exterior div label {
+    display: block;
+}
+
+#todastablas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tabla {
+    background-color: rgb(215, 214, 214);
+    border-radius: 30%;
+    border-style: solid;
+    border-color: black;
+    width: 8em;
+    margin: 0.5em;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <section>
+        <div class="exterior">
+            <h3>ej: 1 (Ejercicios en pseudocódigo)</h3>
+            <label for="primer numero">primer número: <input onchange="operar()" id="primer" type="number"></label>
+            <label for="segundo numero">segundo número: <input onchange="operar()" id="segun" type="number"></label>
+            <div id="ejercicios_pseudocodigo">
+
+            </div>
+        </div>
+        <div class="exterior">
+            <h3>ej: 2 (Ejercicios en pseudocódigo 2)</h3>
+
+            <label for="numero de niños">Número de niños: <input onchange="porcent()" id="niños" type="number"></label>
+            <label for="numero de niñas">Número de niñas: <input onchange="porcent()" id="niñas" type="number"></label>
+            <div id="ejercicios_pseudocodigo2">
+
+            </div>
+        </div>
+        <div class="exterior">
+            <h3>ej: 3 (Ejercicios en pseudocódigo 3)</h3>
+            <label for="Introduce el primer número">Primer número: <input onchange="comparar()" id="Pcomparar"
+                    type="number"></label>
+            <label for="Introduce el segundo número">Segundo número: <input onchange="comparar()" id="Scomparar"
+                    type="number"></label>
+            <div id="ejercicios_pseudocodigo3">
+
+            </div>
+        </div>
+        <div class="exterior">
+            <h3>ej: 4 (Password validation)</h3>
+            <label for="clave">Introduzca la clave: <input id="clave" type="text"><button
+                    onclick="verify()">submit</button><button onclick="refresh()">refresh</button></label>
+
+        </div>
+
+        <div class="exterior" id="ejercicio_estructuras de control">
+            <h3>ej: 5 (Ejercicios estrucutas de control)</h3>
+            <label for="multiplicar">Número máximo: <input onchange="multiplos()" type="number" id="number"></label>
+            <div id="primeraTabla"></div>
+            <div id="todastablas"></div>
+        </div>
+        <div class="exterior">
+            <h3>ej: 6 (Descuento de tienda)</h3>
+            <label for="importe">Importe: <input onchange="descuentos()" id="importe" type="number">€<br></label>
+            <label for="mes">Mes: <input onchange="descuentos()" id="mes" type="text"></label>
+            <div id="Descuento_tienda"></div>
+        </div>
+        <div class="exterior">
+            <h3>ej: 7 (Comprobador de operaciones)</h3>
+            <label for="expresion o texto ">Expresión/texto: <input onchange="comprobar()" id="expresion" type="text"></label>
+            <div id="Comprobador_operaciones"></div>
+        </div>
+        <div class="exterior" id="Comprobacion_identidad">
+            <h3>ej: 8 (Comprobación de identidad)</h3>
+            <form action="comprobacion">
+                <label for="username">Nombre de usuario: <input id="username" type="text"></label>
+                <label for="password">contraseña: <input id="password" type="password"></label>
+                <button onclick="compIdentidad()">Submit</button>
+            </form>
+            <div></div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
