@@ -1,7 +1,12 @@
 * {
     margin: auto;
 }
-
+body{
+    background-image: url(media/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -9,7 +14,7 @@ section {
 }
 
 .exterior {
-    background-color: grey;
+    background-color: #798b94;
     border-radius: 15%;
     width: 20em;
     height: 15em;
@@ -17,7 +22,9 @@ section {
     display: inline-block;
     margin: 0.5em;
     padding: 1em;
-    ;
+    border:solid 2px;
+    background-size: cover;
+
 }
 
 .exterior div label {

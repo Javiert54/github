@@ -96,40 +96,48 @@ function multiplos() {  //Esta función es un pelín complicada
 
 
 
-	function descuentos() {
-		var total = Number(document.getElementById("importe").value); //Hacemos que la variable "total" sea sobre la que escribimos directamente, para ahorrarnos una variable
-		var mes = document.getElementById("mes").value; //Leemos el mes
-		switch (mes) {
+function descuentos() {
+	var total = Number(document.getElementById("importe").value); //Hacemos que la variable "total" sea sobre la que escribimos directamente, para ahorrarnos una variable
+	var mes = document.getElementById("mes").value; //Leemos el mes
+	switch (mes) {
 
-			case "octubre": case "julio": case "agosto": //Si el mes es octubre...
-				total *= 0.85; //Aplicamos descuento
-				break;
-			//Si no es ocutubre, no entramos en la cláusula IF, y no aplicamos descuento
-			case "enero": case "febrero":
-				total *= 0.80; //Aplicamos descuento
-				break;
-			case "diciembre": case "noviembre":
-				total *= 0.75; //Aplicamos descuento
-				break;
-			default:
-				total *= 1;
-		}
-		document.getElementById("Descuento_tienda").innerHTML = ("Dinero a pagar: " + total + "€");
+		case "octubre": case "julio": case "agosto": //Si el mes es octubre...
+			total *= 0.85; //Aplicamos descuento
+			break;
+		//Si no es ocutubre, no entramos en la cláusula IF, y no aplicamos descuento
+		case "enero": case "febrero":
+			total *= 0.80; //Aplicamos descuento
+			break;
+		case "diciembre": case "noviembre":
+			total *= 0.75; //Aplicamos descuento
+			break;
+		default:
+			total *= 1;
 	}
-	function comprobar() {
-		var input = document.getElementById("expresion").value;
-		document.getElementById("Comprobador_operaciones").innerHTML = "Su respuesta es: " + eval(input) + " y es de tipo: " + typeof (eval(input));
-	}
+	document.getElementById("Descuento_tienda").innerHTML = ("Dinero a pagar: " + total + "€");
+}
+function comprobar() {
+	var input = document.getElementById("expresion").value;
+	document.getElementById("Comprobador_operaciones").innerHTML = "Su respuesta es: " + eval(input) + " y es de tipo: " + typeof (eval(input));
+}
 
-	function compIdentidad() {
-		var username = document.getElementById("username").value;
-		var password = document.getElementById("password").value;
+function compIdentidad() {
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
 
-		if (password == "" || username == "") {
-			alert("Cancelado");
-		} else if (password == "Webmaster" && username == "Admin") {
-			alert("Bienvenido!");
-		} else {
-			alert("Incorrecto");
-		}
+	if (password == "" || username == "") {
+		alert("Cancelado");
+	} else if (password == "Webmaster" && username == "Admin") {
+		alert("Bienvenido!");
+	} else {
+		alert("Incorrecto");
 	}
+}
+
+function backimg1(id) {
+	document.getElementById(id).style.backgroundImage = "url('media/background.jpg')";
+	// document.getElementById(id).style.backgroundImage.
+}
+function backimg2(id) {
+	document.getElementById(id).style.backgroundImage = "url('')";  //Quitamos la imagen de fondo
+}
