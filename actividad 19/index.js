@@ -5,13 +5,14 @@ var datosAlumn = [];
 document.getElementById("label").innerHTML = label;
 function datos() {
     var dato=document.getElementById("input").value
-    datosAlumn.push(dato);
 
-    var nuevo = document.createElement("td");
-    document.getElementById(`id${parseInt(submitidas/5)}`).appendChild(nuevo);
-    nuevo.id="2id"+submitidas/5;  //Ponemos "2id" para que los id de cada <td> no se solapen con los id de los <tr>
-    document.getElementById(`2id${submitidas/5}`).append(dato);
     if(dato!=""){
+        datosAlumn.push(dato);
+
+        var nuevo = document.createElement("td");
+        document.getElementById(`id${parseInt(submitidas/5)}`).appendChild(nuevo);
+        nuevo.id="2id"+submitidas/5;  //Ponemos "2id" para que los id de cada <td> no se solapen con los id de los <tr>
+        document.getElementById(`2id${submitidas/5}`).append(dato);
         submitidas += 1;
         document.getElementById("input").value= "";  //Borramos el contenido del input
 
