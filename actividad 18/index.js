@@ -4,11 +4,11 @@ var label = "Introduzca un código: ";
 var datosAlumn = [];
 document.getElementById("label").innerHTML = label;
 function datos() {
+    var dato= document.getElementById("input").value;
+    datosAlumn.push(dato);
 
-    datosAlumn.push(document.getElementById("input").value);
 
-
-    document.getElementById("input").value = "";  //Borramos el contenido del input
+    dato = "";  //Borramos el contenido del input
 
     if (submitidas%5==4) {  //Sé que esto es innesesariamente complicado. Solo quería utilizar el mismo input para todo.
         // submitidas = 0;
