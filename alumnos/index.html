@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <h1>Listado de Alumnos</h1>
+    <div id="usuarios">
+
+
+    </div>
+
+
+
+    <section>
+        <div class="formulario">
+            <h3>AÑADIR ALUMNO</h3>
+            <form action="registrar alumno">
+
+                <label for="name">Nombre del alumno: <input type="text" id="nombre"></label>
+                <p id="namediv"></p>
+                <label for="edad">Edad del alumno: <input type="number" id="edad"></label>
+                <p id="agediv"></p>
+                <label for="identificación">Identificación: <input type="text" id="identificacion"></label>
+                <p id="iddiv"></p>
+                <label for="correo">Correo Electrónico: <input type="email" id="correo"></label>
+                <p id="emaildiv"></p>
+
+            </form>
+            <button onclick="añadiralumno()">Submit</button>
+        </div>
+
+        <div class="formulario">
+            <h3>EDITAR ALUMNO</h3>
+            <form action="editar alumno">
+
+                <label for="name">Nombre del alumno: <input type="text" id="nombredit"></label>
+                <label for="edad">Edad del alumno: <input type="number" id="edadedit"></label>
+                <label for="identificación">Identificación: <input type="text" id="identificacionedit"></label>
+                <label for="correo">Correo Electrónico: <input type="email" id="correoedit"></label>
+                <div>
+                <select name="alumnoption" id="alumnoption">
+                </select>
+                </div>
+            </form>
+
+            <button onclick="editaralumno()">Editar</button>
+        </div>
+
+        <div class="formulario">
+            <h3>ELIMINAR ALUMNO</h3>
+            <form action="eliminar alumno">
+                <div>
+                <select name="alumnoption" id="eliminalumno">
+                </select>
+                </div>
+            </form>
+
+            <button onclick="eliminaralumno()">Eliminar</button>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
