@@ -19,9 +19,10 @@ section {
 .formulario {
     width: 33%;
     background-color: dodgerblue;
-    border-radius: 18%;
+    border-radius: 3%;
     margin-right: 2em;
     padding: 1em;
+    border: solid 1px black;
 }
 .formulario:last-child {
     margin-right: 0em;

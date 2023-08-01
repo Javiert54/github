@@ -3,18 +3,18 @@ var nombresalumn = obtenervalor("nombresalumn") || [];
 
 
 alumnos.forEach(element => {
-    var option = document.createElement("option");
-    option.text = element.nombre;
-    option.value = element;
-    var eliminalumno = document.querySelector("#eliminalumno");
-    eliminalumno.add(option);
+
 
     option = document.createElement("option");
     option.text = element.nombre;
-    option.value = element;
+    option.value = element.nombre;
     var alumnoption = document.querySelector("#alumnoption");
     alumnoption.add(option);
-
+    var option = document.createElement("option");
+    option.text = element.nombre;
+    option.value = element.nombre;
+    var eliminalumno = document.querySelector("#eliminalumno");
+    eliminalumno.add(option);
 
 });
 
@@ -81,33 +81,43 @@ function añadiralumno() {
         nombresalumn.push(alumno.nombre);
         console.log(alumnos);
 
-        var option = document.createElement("option");
-        option.text = alumno.nombre;
-        option.value = alumno;
-        var alumnoption = document.querySelector("#alumnoption");
-        alumnoption.add(option);
+        // var option = document.createElement("option");
+        // option.text = alumno.nombre;
+        // option.value = alumno.nombre;
+        // var alumnoption = document.querySelector("#alumnoption");
+        // alumnoption.add(option);
 
         guardar("alumnos", alumnos);
         guardar("nombresalumn", nombresalumn);
+        window.location.reload();
     }
 
 }
 
 
 function editaralumno() {
-    let alumno = document.querySelector("#alumnoption").value;
-    alumno = {
-        nombre: document.querySelector("#nombredit").value,
-        edad: document.querySelector("#edadedit").value,
-        identificacion: document.querySelector("#identificacionedit").value,
-        correo: document.querySelector("#correoedit").value
+    //let alumno = obtenervalor("alumnos").find(element => element.nombre == document.querySelector("#alumnoption").value);
+    let alumno = alumnos.find(element => element.nombre == document.querySelector("#alumnoption").value);
+    let indexalumno = alumnos.indexOf(alumno);
+    console.log(typeof (document.querySelector("#atributoption").value));
 
-    }
+
+    eval(document.querySelector("#atributoption").value);
+
+    alumnos = obtenervalor("alumnos");
+    alumnos[indexalumno] = alumno;
+    guardar("alumnos", alumnos);
+    window.location.reload();
 
 }
 
 
+function eliminaralumno(){
 
+    alumnos = alumnos.filter(alumno => alumno.nombre!=document.querySelector("#eliminalumno").value);
+    guardar("alumnos", alumnos);
+    window.location.reload();
+}
 
 
 

@@ -40,14 +40,19 @@
             <h3>EDITAR ALUMNO</h3>
             <form action="editar alumno">
 
-                <label for="name">Nombre del alumno: <input type="text" id="nombredit"></label>
-                <label for="edad">Edad del alumno: <input type="number" id="edadedit"></label>
-                <label for="identificación">Identificación: <input type="text" id="identificacionedit"></label>
-                <label for="correo">Correo Electrónico: <input type="email" id="correoedit"></label>
-                <div>
+                <label for="name">Nombre del alumno: </label>
                 <select name="alumnoption" id="alumnoption">
                 </select>
-                </div>
+
+                <label for="name">Atributo a editar: </label>
+                <select name="atributo" id="atributoption">
+                    <option value= 'alumno.nombre = document.querySelector("#atributo").value' >Nombre</option>
+                    <option value= 'alumno.edad = document.querySelector("#atributo").value' >Edad</option>
+                    <option value= 'alumno.identificacion = document.querySelector("#atributo").value' >Identificacion</option>
+                    <option value= 'alumno.correo = document.querySelector("#atributo").value' >Correo</option>
+                </select>
+                <input type="text" id="atributo">
+
             </form>
 
             <button onclick="editaralumno()">Editar</button>
