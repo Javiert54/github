@@ -15,7 +15,7 @@ body{
 
 :root{
     --product-img: url('img/coche1.jpg'), url('img/coche2.jpg'), url('img/coche3.jpg'), url('img/coche4.jpg'), url('img/coche5.jpg'), url('img/coche6.jpg');
-    --bg-color: #e5031d;
+    --bg-color: #CDEAE8;
 }
 
 .card{
