@@ -25,14 +25,6 @@ function cambiar(){
 }
 
 
-colors.forEach((item, i) => {
-    item.addEventListener('click', () => {
-        const root = document.querySelector(':root');
-
-        root.style.setProperty('--product-img', `url(img/${item.className}.jpg)`);
-        root.style.setProperty('--bg-color', hexCodes[i]);
-    })
-})
 
 
 function enviar(){
