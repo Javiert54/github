@@ -67,6 +67,10 @@ aside div{
 #mainarea img{
     width: 15em;
 }
+#mainarea video{
+
+    width: 45em;
+}
 #curso{
     width: 30em;
     padding: 2em;
