@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/pruebapractica1842/contacto.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpg" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="/pruebapractica1842/inicio.html">INICIO</a></li>
+                <li><a href="/pruebapractica1842/curso.html">CURSO</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="mainarea">
+        <aside>
+            <div>
+                <h3>Nombre de usuario</h3>
+                <p>Rol</p>
+            </div>
+
+            <div>
+                <img id="avatar" src="/pruebapractica1842/img/avatar1.jpg" alt="avatar">
+                <h4></h4>
+                <p></p>
+                <button onclick="cambiar()">Cambiar color</button>
+            </div>
+        </aside>
+        <section>
+            <div id="formulario">
+                <form action="" >
+                    <label for="nombre">Nombre: <input type="text" id="nombre"></label>
+                    <label for="correo">Correo: <input type="email" id="correo"></label>
+                    <label for="nombre">Asunto: <input type="text" id="asunto"></label>
+                    <label for="nombre">Mensaje: <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea></label>
+                    
+                </form>
+                <button onclick="enviar()">ENVIAR</button>
+            </div>
+
+            <div id="textolegal">
+                <p>Texto legal Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta repudiandae exercitationem magni dolores id facere aliquid hic accusamus, dolorem, quibusdam sapiente quasi nihil perspiciatis, ducimus iusto minus unde aperiam incidunt?</p>
+
+            </div>
+        </section>
+        
+
+    </section>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+    </footer>
+    <script src="/pruebapractica1842/contacto.js"></script>
+</body>
+</html>
