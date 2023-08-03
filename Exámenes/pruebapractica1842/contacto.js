@@ -16,7 +16,7 @@ function cambiar(){
 
     }
     contador++;
-    document.querySelector("#avatar").src = `/pruebapractica1842/img/avatar${contador}.jpg`;
+    document.querySelector("#avatar").src = `/Exámenes/pruebapractica1842/img/avatar${contador}.jpg`;
 
 
     if(contador>=4){

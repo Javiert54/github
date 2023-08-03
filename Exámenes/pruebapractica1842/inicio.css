@@ -1,7 +1,9 @@
 *{
     margin: 0;
 }
-
+:root{
+    --backcolor: #00214A;
+}
 header{
     display: flex;
     background-color: #04BBEC;
@@ -41,17 +43,24 @@ aside{
     width: 20vw;
 
 }
+
 aside div{
-    height: 40.7vh;
-
-    background-color: #00214A;
+    height: 38.7vh;
+    background-color: var(--backcolor);
     border: 1px solid black;
-    padding-top: 1em;
-
-    text-align: center;
+    padding: 1em;
     color: #04BBEC;
-
 }
+
+form {
+    display:flex;
+    /* background-color: black; */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
 #mainarea section{
     background-image: url(/pruebapractica1842/img/imagen-fondo.jpg);
     background-size: cover;
@@ -62,10 +71,23 @@ aside div{
     display: flex;
     justify-content: center;
     width: 80vw;
-    height: 86vh;
+    height: 86.5vh;
 
 }
 
+#mainarea section p{
+
+    text-align: justify;
+    padding-right: 4em;
+    padding-left: 4em;
+}
+#mainarea img{
+    width: 15em;
+}
+#mainarea video{
+
+    width: 45em;
+}
 
 button{
     width: 9em;
