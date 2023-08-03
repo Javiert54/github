@@ -3,6 +3,7 @@
 }
 :root{
     --backcolor: #00214A;
+    --background: url(/Exámenes/pruebapractica1842/img/background1.jpg), url(/Exámenes/pruebapractica1842/img/background2.jpg), url(/Exámenes/pruebapractica1842/img/background3.jpg);
 }
 header{
     display: flex;
@@ -62,7 +63,7 @@ form {
 
 
 #mainarea section{
-    background-image: url(/pruebapractica1842/img/imagen-fondo.jpg);
+    background-image: var(--background);
     background-size: cover;
     flex-direction: column;
     text-align: center;
@@ -89,10 +90,12 @@ form {
     width: 45em;
 }
 
+
 button{
     width: 9em;
     height: 2em;
     background-color: #2060af;
+    cursor: pointer;
 
     
 }
