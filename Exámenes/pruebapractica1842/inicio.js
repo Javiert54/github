@@ -61,13 +61,9 @@ function contacto(){
 
 
 function alumno(){
-
-
-    root.style.setProperty('--background', "url(/Exámenes/pruebapractica1842/img/alumnos.jpg)");
-}
+    root.style.setProperty('--background', "url(/Exámenes/pruebapractica1842/img/alumnos.jpg)");}
 function profesor(){
-    root.style.setProperty('--background', "url(/Exámenes/pruebapractica1842/img/profes.jpg)");
-}
+    root.style.setProperty('--background', "url(/Exámenes/pruebapractica1842/img/profes.jpg)");}
 
 
 var listacontactos = JSON.parse(localStorage.getItem("listacontactos")) || [];
