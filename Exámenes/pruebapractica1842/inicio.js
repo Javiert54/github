@@ -1,15 +1,78 @@
-const root = document.querySelector(':root');
+$(function(){
 
 
-function inicio(){
-    document.querySelector("#informate").innerHTML= 
-    `
-    <h1>¡INFÓRMATE!</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos officia id voluptatum animi neque similique necessitatibus sit autem libero harum nobis mollitia, architecto accusamus blanditiis. Ad amet adipisci exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ab, temporibus quaerat facere dolor in! Quaerat laborum perspiciatis eaque, minima enim nisi ex in molestiae, dolores, ab doloribus veritatis totam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe accusamus, amet ut molestiae voluptates hic earum enim aliquam doloremque autem unde natus quibusdam laborum iusto fugit blanditiis culpa adipisci asperiores?</p>
-    <button onclick="curso()">INFORMACIÓN</button>
-    `
-    root.style.setProperty('--background', 'url(/Exámenes/pruebapractica1842/img/background1.jpg)');
+    $("#profesor").click(function(){
+
+        $("#informate").css("background-image", "url(img/background2.jpg)")
+        $("#informate").css("color", "blue")
+
+        // $(this).hide();
+        
+    })
+    $("#alumno").click(function(){
+
+        $("#informate").css("background-image", "url(img/background3.jpg)")
+        $("#informate").css("color", "red")
+
+        // $(this).hide();
+        
+    })
+
+          
+
+})
+
+
+const openEls = document.querySelectorAll("[data-open]");
+const closeEls = document.querySelectorAll("[data-close]");
+const isVisible = "is-visible";
+
+for (const el of openEls) {
+  el.addEventListener("click", function() {
+    const modalId = this.dataset.open;
+    document.getElementById(modalId).classList.add(isVisible);
+  });
 }
+
+for (const el of closeEls) {
+  el.addEventListener("click", function() {
+    this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+  });
+}
+
+document.addEventListener("click", e => {
+  if (e.target == document.querySelector(".modal.is-visible")) {
+    document.querySelector(".modal.is-visible").classList.remove(isVisible);
+  }
+});
+
+document.addEventListener("keyup", e => {
+  // if we press the ESC
+  if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+    document.querySelector(".modal.is-visible").classList.remove(isVisible);
+  }
+});
+
+
+
+
+
+
+
+
+
+// const root = document.querySelector(':root');
+
+
+// function inicio(){
+//     document.querySelector("#informate").innerHTML= 
+//     `
+//     <h1>¡INFÓRMATE!</h1>
+//     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos officia id voluptatum animi neque similique necessitatibus sit autem libero harum nobis mollitia, architecto accusamus blanditiis. Ad amet adipisci exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ab, temporibus quaerat facere dolor in! Quaerat laborum perspiciatis eaque, minima enim nisi ex in molestiae, dolores, ab doloribus veritatis totam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe accusamus, amet ut molestiae voluptates hic earum enim aliquam doloremque autem unde natus quibusdam laborum iusto fugit blanditiis culpa adipisci asperiores?</p>
+//     <button onclick="curso()">INFORMACIÓN</button>
+//     `
+//     root.style.setProperty('--background', 'url(/Exámenes/pruebapractica1842/img/background1.jpg)');
+// }
 
 function curso(){
     document.querySelector("#informate").innerHTML=
@@ -25,32 +88,30 @@ function curso(){
 
 }
 
-function contacto(){
+// function contacto(){
 
 
-    document.querySelector("#informate").innerHTML=
-    `            
-    <div id="formulario">
-        <form action="" >
-            <label for="nombre">Nombre: <input type="text" id="nombre"></label>
-            <label for="correo">Correo: <input type="email" id="correo"></label>
-            <label for="nombre">Asunto: <input type="text" id="asunto"></label>
-            <label for=""><textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea></label>
+//     document.querySelector("#informate").innerHTML=
+//     `            
+//     <div id="formulario">
+//         <form action="" >
+//             <label for="nombre">Nombre: <input type="text" id="nombre"></label>
+//             <label for="correo">Correo: <input type="email" id="correo"></label>
+//             <label for="nombre">Asunto: <input type="text" id="asunto"></label>
+//             <label for=""><textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea></label>
 
             
-        </form>
-        <button onclick="enviar()">ENVIAR</button>
-    </div>
+//         </form>
+//         <button onclick="enviar()">ENVIAR</button>
+//     </div>
 
-    <div id="textolegal">
-        <p>Texto legal Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta repudiandae exercitationem magni dolores id facere aliquid hic accusamus, dolorem, quibusdam sapiente quasi nihil perspiciatis, ducimus iusto minus unde aperiam incidunt?</p>
+//     <div id="textolegal">
+//         <p>Texto legal Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta repudiandae exercitationem magni dolores id facere aliquid hic accusamus, dolorem, quibusdam sapiente quasi nihil perspiciatis, ducimus iusto minus unde aperiam incidunt?</p>
 
-    </div>
-    `
-    root.style.setProperty('--background', 'url(/Exámenes/pruebapractica1842/img/background3.jpg)');
-}
-
-
+//     </div>
+//     `
+//     root.style.setProperty('--background', 'url(/Exámenes/pruebapractica1842/img/background3.jpg)');
+// }
 
 
 
@@ -60,49 +121,51 @@ function contacto(){
 
 
 
-function alumno(){
-    root.style.setProperty('--background', "url(/Exámenes/pruebapractica1842/img/alumnos.jpg)");}
-function profesor(){
-    root.style.setProperty('--background', "url(/Exámenes/pruebapractica1842/img/profes.jpg)");}
 
 
-var listacontactos = JSON.parse(localStorage.getItem("listacontactos")) || [];
+// function alumno(){
+//     root.style.setProperty('--background', "url(/Exámenes/pruebapractica1842/img/alumnos.jpg)");}
+// function profesor(){
+//     root.style.setProperty('--background', "url(/Exámenes/pruebapractica1842/img/profes.jpg)");}
 
 
-var contador= 1;
-
-function cambiar(){
-
-    if(contador%2==0){
-
-        root.style.setProperty('--backcolor', '#00214A');
-
-    }else{
-        root.style.setProperty('--backcolor', '#004A46');
+// var listacontactos = JSON.parse(localStorage.getItem("listacontactos")) || [];
 
 
+// var contador= 1;
 
-    }
-    contador++;
-    document.querySelector("#avatar").src = `/Exámenes/pruebapractica1842/img/avatar${contador}.jpg`;
+// function cambiar(){
 
+//     if(contador%2==0){
 
-    if(contador>=4){
-        contador=0;
-    }
-}
+//         root.style.setProperty('--backcolor', '#00214A');
+
+//     }else{
+//         root.style.setProperty('--backcolor', '#004A46');
 
 
 
+//     }
+//     contador++;
+//     document.querySelector("#avatar").src = `/Exámenes/pruebapractica1842/img/avatar${contador}.jpg`;
 
-function enviar(){
-    var contactodt = {  //Creamos un objeto con todos los datos insertados en el input
-        nombre: document.querySelector("#nombre").value,
-        correo: document.querySelector("#correo").value,
-        asunto: document.querySelector("#asunto").value,
-        mensaje: document.querySelector("#mensaje").value
-    }
-    listacontactos.push(contactodt);
-    localStorage.setItem("listacontactos", JSON.stringify(listacontactos))   //Lo guardamos en la memoria local
-}
+
+//     if(contador>=4){
+//         contador=0;
+//     }
+// }
+
+
+
+
+// function enviar(){
+//     var contactodt = {  //Creamos un objeto con todos los datos insertados en el input
+//         nombre: document.querySelector("#nombre").value,
+//         correo: document.querySelector("#correo").value,
+//         asunto: document.querySelector("#asunto").value,
+//         mensaje: document.querySelector("#mensaje").value
+//     }
+//     listacontactos.push(contactodt);
+//     localStorage.setItem("listacontactos", JSON.stringify(listacontactos))   //Lo guardamos en la memoria local
+// }
 

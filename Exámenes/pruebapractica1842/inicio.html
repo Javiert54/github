@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/Exámenes/pruebapractica1842/inicio.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <nav>
             <ul>
                 <!-- <li><a href="#">INICIO</a></li> -->
-                <li><button onclick="inicio()">INICIO</button></li>
+                <li><button id="inicio">INICIO</button></li>
                 <!-- <li><a href="/Exámenes/pruebapractica1842/curso.html">CURSO</a></li> -->
                 <li ><button onclick="curso()">CURSO</button></li>
                 <!-- <li><a href="/Exámenes/pruebapractica1842/contacto.html">CONTACTO</a></li> -->
@@ -24,14 +25,16 @@
     </header>
     <section id="mainarea">
 
+
+
         <aside>
             <div>
                 <h3>ACCEDER</h3>
-                <button onclick="profesor()">Profesor</button><br>
-                <button onclick="alumno()">Alumno</button>
+                <button class="open-modal" data-open="modal1" id="profesor">Profesor</button><br>
+                <button onclick="alumno()" id="alumno">Alumno</button>
             </div>
             <div>
-                <img id="curso" src="/Exámenes/pruebapractica1842/img/imagen-curso.jpg" alt="imagen curso">
+                <img id="curso" src="img/imagen-curso.jpg" alt="imagen curso">
                 <h4>Inscríbete</h4>
                 <p>Lorem, ipsum dolor</p>
                 <button onclick="contacto()">Información</button>
@@ -43,17 +46,38 @@
                 <h1>¡INFÓRMATE!</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quos officia id voluptatum animi neque similique necessitatibus sit autem libero harum nobis mollitia, architecto accusamus blanditiis. Ad amet adipisci exercitationem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ab, temporibus quaerat facere dolor in! Quaerat laborum perspiciatis eaque, minima enim nisi ex in molestiae, dolores, ab doloribus veritatis totam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe accusamus, amet ut molestiae voluptates hic earum enim aliquam doloremque autem unde natus quibusdam laborum iusto fugit blanditiis culpa adipisci asperiores?</p>
                 <button onclick="curso()">INFORMACIÓN</button>
+                <!-- <div class="modal" id="modal1">
+                    <button id="cierre"></button>
+                    pop up
+        
+                </div> -->
             </div>
         </section>
     </section>
-
+    <div class="modal" id="modal1">
+        <div class="modal-dialog">
+          <header class="modal-header">
+            The header of the first modal
+            <button class="close-modal" aria-label="close modal" data-close>
+              ✕  
+            </button>
+          </header>
+          <section class="modal-content">
+            <p><strong>Press ✕, ESC, or click outside of the modal to close it</strong></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellendus reprehenderit accusamus totam ratione! Nesciunt, nemo dolorum recusandae ad ex nam similique dolorem ab perspiciatis qui. Facere, dignissimos. Nemo, ea.</p>
+            <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure</p>
+            <p>Nullam vitae enim vel diam elementum tincidunt a eget metus. Curabitur finibus vestibulum rutrum. Vestibulum semper tellus vitae tortor condimentum porta. Sed id ex arcu. Vestibulum eleifend tortor non purus porta dapibus</p>
+            <p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure</p>
+          </section>
+        </div>
+      </div>
 
     <footer>
 
         <p>Todos los derechos reservados</p>
     </footer>
 
-    <script src="/Exámenes/pruebapractica1842/inicio.js"></script>
+    <script src="inicio.js"></script>
 </body>
 
 </html>
