@@ -12,15 +12,20 @@ $(function(){
             $("html")
             .css("background-color", "black")
             .css("color", "white");
+            $("body")
+                .css("font-size", "25px");
             $(".enlace")
                 .css("color", "white")
                 .css("font-size", "23px");
             $(":root")
                 .css("--color", "white");
+            
         }else{
             $("html")
                 .css("background-color", "white")
                 .css("color", "black");
+            $("body")
+            .css("font-size", "20px");
             $(".enlace")
                 .css("color", "black")
                 .css("font-size", "18px");
@@ -44,7 +49,6 @@ $(function(){
     
 });
 
-root.style.setProperty('--bg-color', hexCodes[i]);
 
 
 
