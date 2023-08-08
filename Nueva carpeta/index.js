@@ -64,20 +64,24 @@ $(function(){
 
         })
     
+    var caja = $("#contenedor");
+    $("#animar"/*document*/).click(function(){
 
-    $("#animar"/*document*/).mousemove(function(){
-        var caja = $("#contenedor");
 
 
         caja.animate({
             marginLeft: "400px",
             fontSize: "40x",
-            height: "120px",//}, "slow")
-            // .animate({
+            height: "120px",}, "slow")
+             .animate({
                 borderRadious: "25%",
                 marginTop: "200px"
             }, "fast")
     })
+
+    
+    caja.draggable();
+
 
 });
 
