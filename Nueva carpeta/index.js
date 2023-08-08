@@ -36,7 +36,7 @@ $(function(){
     //     $(this).css("background-color", "green")
     // })
 
-
+    
     function cambiaRojo(){
         $(this).css("background-color", "red");
     }
