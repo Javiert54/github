@@ -38,12 +38,20 @@ footer {
     
 }
 
-#droppable {
-    width: 150px;
-    height: 150px;
-    padding: 0.5em;
-    float: left;
-    margin: 10px;
-    background-color: chocolate;
-    top: 0em;
+
+
+#div1{
+    position: absolute;
+    /* left: -1px;
+    top: -120px; */
+}
+#img1{
+    position: relative;
+    left: 50px;
+    top: -130px;
+}
+#div2{
+    position: relative;
+    left: 11px;
+    top: -441px;
 }
