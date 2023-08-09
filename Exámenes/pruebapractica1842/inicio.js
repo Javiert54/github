@@ -1,31 +1,8 @@
-$(function(){
-
-
-    $("#profesor").click(function(){
-
-        $("#informate").css("background-image", "url(img/background2.jpg)")
-        $("#informate").css("color", "blue")
-
-        // $(this).hide();
-        
-    })
-    $("#alumno").click(function(){
-
-        $("#informate").css("background-image", "url(img/background3.jpg)")
-        $("#informate").css("color", "red")
-
-        // $(this).hide();
-        
-    })
-
-          
-
-})
-
 
 const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
+
 
 for (const el of openEls) {
   el.addEventListener("click", function() {
@@ -34,17 +11,20 @@ for (const el of openEls) {
   });
 }
 
+
 for (const el of closeEls) {
   el.addEventListener("click", function() {
     this.parentElement.parentElement.parentElement.classList.remove(isVisible);
   });
 }
 
+
 document.addEventListener("click", e => {
   if (e.target == document.querySelector(".modal.is-visible")) {
     document.querySelector(".modal.is-visible").classList.remove(isVisible);
   }
 });
+
 
 document.addEventListener("keyup", e => {
   // if we press the ESC

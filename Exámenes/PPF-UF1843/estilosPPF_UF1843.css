@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2em;
+}
+
+header{
+    grid-column:1/5 ;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(252, 249, 249);
+}
+header img{
+
+  width: 10em;
+}
+
+#input{
+  margin-top: 8em;
+  height: 1.5em;
+}
+
+.botonerappal button{
+    background-color: #ffffff;
+    border: 2px solid #008CBA;
+    color: #008CBA;
+    border-radius: 25%;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+.botonerappal button:hover{
+    background-color: #008CBA;
+    color: white;
+}
+main{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-image: url('media/imagen-fondo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+main div{
+  min-height: 20vh;
+  background-color: #ffffff81;
+  padding: 1em;
+  border: .1em solid #000000;
+  text-align: center;
+}
+
+.parrafocont{
+  font-size: 12px;
+
+}
+
+footer{
+  
+  text-align: center;
+}
+
+footer img{
+  width: 10em;
+}
+
+a.selected {
+  background-color:#1F75CC;
+  color:white;
+  z-index:100;
+}
+
+.messagepop {
+  background-color:#FFFFFF;
+  border:1px solid #999999;
+  cursor:default;
+  display:none;
+  
+  margin-top: 15px;
+  position:absolute;
+  text-align:left;
+  width:394px;
+  z-index:50;
+  padding: 25px 25px 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+.messagepop p, .messagepop.div {
+  border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  height: 1em;
+  padding-bottom: 8px;
+}
+
+
+#red, #green, #blue {
+
+  width: 300px;
+  height: 1em important!;
+  margin: 15px;
+
+}
+
+#red .ui-slider-range { 
+  background: #ef2929; 
+  /* height: 10px; */
+}
+
+#green .ui-slider-range { background: #8ae234;   height: 1em; }
+#green .ui-slider-handle { border-color: #8ae234;   height: 1em; }
+#blue .ui-slider-range { background: #729fcf;   height: 1em; }
+#blue .ui-slider-handle { border-color: #729fcf;   height: 1em; }
+
+
+#dialog img{
+  width: 10em;
+}
+
+
+
+
+
+
+
+
+
+
+  @keyframes desdeArriba {
+    from {
+      transform: translateY(-50vh);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
