@@ -25,7 +25,7 @@
 			}
 
 
-			$.ajax({
+			$.ajax({	
 				type: "POST",
 				url: $(this).attr("action"),
 				data: usuario,
