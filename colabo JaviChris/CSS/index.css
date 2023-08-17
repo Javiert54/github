@@ -5,13 +5,24 @@
 }
 
 /* Cabecera */
+:root{
+    --headerColor: #005296;
+    --asideColor: #3a81d1;
+    --buttonHover:  #4c77ee;
+    --mainArea: #ffffff;
+    --fontColor: #000000;
+}
+body{
+    color: var(--fontColor);
+}
+
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    background-color: rgba(0, 82, 150, 0.979);
+    background-color: var(--headerColor);
 }
 #logo {
     width: 12.5%;
@@ -33,11 +44,12 @@ header nav {
 }
 
 .menu button:hover {
-    background-color: rgb(76, 119, 238) ;
+    background-color: var(--buttonHover);
     border: 1px solid rgb(255, 255, 255);
 }
 /* Casi toa la página */
 .main_area {
+    background-color: var(--mainArea);
     display: flex;
     width: 100%;
     height: 85vh;
@@ -49,7 +61,24 @@ aside {
     justify-content: center;
     width: 30%;
     text-align: center;
-    background-color: rgb(58, 129, 209);
+    background-color: var(--asideColor);
+}
+
+.abuttond {
+    background-color: rgb(35, 37, 39);
+    padding: 0.25em;
+    /* border: 1px solid rgba(0, 0, 0, 0); */
+    margin: 0.25em 0.75em;
+    font-size: 1.25em;
+    color: white;
+}
+.abuttonc {
+    background-color: rgb(253, 253, 253);
+    padding: 0.25em;
+    /* border: 1px solid rgba(0, 0, 0, 0); */
+    margin: 0.25em 0.75em;
+    font-size: 1.25em;
+    color: rgb(0, 0, 0);
 }
 
 /* Contenido en gran parte de lo que hagas clic */

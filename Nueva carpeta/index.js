@@ -8,12 +8,11 @@ $(function(){
 
     amarillo = $("#amarillo");
     amarillo
-        .css("background-color", "yellow")
+        .css("background-color", "yellow");
 
 
     $("#verde")
-        .css("background-color", "green")
-        
+        .css("background-color", "green");
     
     
     rojo.addClass("recuadro");
@@ -58,7 +57,7 @@ $(function(){
     $("#add-button")
         .click(function(){
             $("#menu").prepend("<li><a href = '"+ $("#add-link").val() +"'>" + $("#add-link").val() + "</a></li>");
-            localStorage.setItem("links", JSON.stringify($("#add-link").val()));
+            localStorage.setItem( "links", JSON.stringify($("#add-link").val()) );
 
             $("#add-link").val("");
 
@@ -73,15 +72,13 @@ $(function(){
             marginLeft: "400px",
             fontSize: "40x",
             height: "120px",}, "slow")
-             .animate({
+            .animate({
                 borderRadious: "25%",
                 marginTop: "200px"
             }, "fast")
     })
 
-    
+
     caja.draggable();
 
-
 });
-
