@@ -1,0 +1,11 @@
+#productList1{
+	display: grid; 
+	grid-template-columns: 1fr 1fr 1fr 1fr; 
+	gap: 0px 2em; 
+	justify-items: center;
+}
+
+.products img{
+	width: 10em;
+	height: 10em;
+}

@@ -1,0 +1,8 @@
+header nav ul{
+	display: flex;
+	justify-content: end;
+}
+header nav ul li {
+	margin-right: 1em;
+	list-style: none;
+}
