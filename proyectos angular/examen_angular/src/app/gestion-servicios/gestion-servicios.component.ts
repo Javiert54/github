@@ -28,6 +28,7 @@ ngOnInit(): void {
   this.listaServicios = this._listaServicios.getServicios()
   this.getcodigos();
   this.mensaje = "DISPONIBLE";
+
   // this.listaServicios.forEach(element => {
   //   element.wishList = document.querySelector("#"+element.codSer).value
   // });
