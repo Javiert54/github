@@ -4,7 +4,36 @@
 	gap: 0px 2em; 
 	justify-items: center;
 }
+section{
+	padding: 1em
+}
+.search{
+	background-color: #0d3f7c;
+	margin: 1em;
+	height: 2.5em;
+	color: #ffffff;
+	padding: 0.3em;
+	border-radius: 1em;
+	box-shadow: 2px 3px 1px 1px black;
+}
+.search:hover{
+	background-color: #042753;
+}
+.buscar{
+	height: 3.3em;
+}
+.bar{
+	width: 16em;
+}
 
+main{
+	background-color: antiquewhite;
+	height: 90vh;
+}
+main div{
+	display: flex;
+	justify-content: center;
+}
 .products img{
 	width: 10em;
 	height: 10em;

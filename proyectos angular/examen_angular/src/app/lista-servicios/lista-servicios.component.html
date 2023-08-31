@@ -1,0 +1,15 @@
+<div class="content">
+<ul>
+    <li *ngFor="let listado of listaServicios">{{listado.codSer}} - {{listado.nombreSer}} - {{listado.descripcionSer}}
+        <span *ngIf="listado.stockSer != false" class="marcado"> DISPONIBLE </span>
+    </li>
+    
+</ul>   
+    <button (click)="verDetalles()">Ver por detalles</button>
+    
+    
+<app-gestion-servicios *ngIf="verdetalle != false"></app-gestion-servicios>
+    
+</div>  
+
+

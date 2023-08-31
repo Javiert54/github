@@ -10,19 +10,24 @@ import { ProductoComponent } from './producto/producto.component'
 import { AccesoComponent } from './acceso/acceso.component'
 import { InicioComponent } from './inicio/inicio.component';
 import { InventarioComponent } from './inventario/inventario.component';
-// import { ModelsComponent } from './models/models.component';
+import { GestionServiciosComponent } from './gestion-servicios/gestion-servicios.component';
+import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
+import { RegistroComponent } from './registro/registro.component';
+
+
 
 
 @NgModule({
-  declarations: [
+  declarations: [					
     AppComponent,
     AccesoComponent,
     InventarioComponent,
     ProductoComponent,
-    InicioComponent
-
-    // ModelsComponent
-  ],
+    InicioComponent,
+    GestionServiciosComponent,
+      ListaServiciosComponent,
+      RegistroComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

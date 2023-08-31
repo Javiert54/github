@@ -1,8 +1,38 @@
-header nav ul{
+*{
+	margin: 0;
+	align-items: center;
+
+}
+header nav {
 	display: flex;
 	justify-content: end;
+}
+header nav ul {
+	margin-right: 1em;
+	list-style: none;
+	display: flex;
+
 }
 header nav ul li {
 	margin-right: 1em;
 	list-style: none;
+
+}
+header nav ul li a{
+	align-items: center;
+	padding: 0.6em;
+	color:#ffffff;
+	background-color: rgb(8, 8, 82);
+	height: 2em;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 1em;
+
+}
+header{
+	height: 4em;
+	display: flex;
+	justify-items: center;
+	background-color: rgb(209, 190, 96);
+	align-items: center;
 }

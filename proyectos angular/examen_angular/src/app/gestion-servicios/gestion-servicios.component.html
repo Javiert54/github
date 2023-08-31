@@ -1,0 +1,16 @@
+<div class="servicios">
+    <div class="servicio" *ngFor="let servis of listaServicios">
+        <label for="checkbox">Lista de deseos: <input type="checkbox" [(ngModel)]="servis.wishList" name="wishlist" id={{servis.codSer}}></label>
+        <h3>Nombre del producto: <br>{{servis.nombreSer}}</h3>
+        <p>Descripción: {{servis.descripcionSer}}</p>
+        <h4>Precio: {{servis.PrecioSer | currency: 'EUR' }}</h4>
+        <img src="{{servis.imagenSer}}" alt="Imagen del servicio">
+        <h4 *ngIf="servis.stockSer">Estado: {{mensaje}}</h4>
+        <button (click)="addContrato()">Contratar</button>
+    </div>
+
+</div>
+<div class="avisos">
+    <h2 *ngIf="Pedidos">¡¡Pedido Realizado!!</h2>
+</div>
+

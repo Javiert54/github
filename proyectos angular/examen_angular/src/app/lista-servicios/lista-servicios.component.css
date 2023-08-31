@@ -1,0 +1,28 @@
+ .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+button{
+    background-color: #ea25b5;
+    color:#cdeae8;
+    font-weight: 600;
+    border: none;
+    height: 3em;
+    width: 8em;
+    border-radius: 1em;
+}
+ul{
+    
+    width: 100%;
+    background-color: #cdeae8;
+    padding-left: 4em;
+    padding-top: 2em;
+}
+li{
+    background-color: #cdeae8;
+    color: #00214a;
+    font-weight: 700;
+    list-style: none;
+    margin-bottom: 1em;
+}
