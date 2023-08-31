@@ -1,0 +1,9 @@
+<main>
+
+        <input class="input textinput" type="email" placeholder="Correo" name="correo" [(ngModel)] = "correo"><br>
+        <input class="input textinput" type="password" placeholder="Contraseña" name="password" [(ngModel)] = "password"><br>
+        <textarea class="input" name="message" cols="30" rows="10" name="message" [(ngModel)] = "message"></textarea><br>
+        <input id="submit" class="input" (click)="mensage(correo, password, message)" type="submit">
+
+</main>
+

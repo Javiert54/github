@@ -1,0 +1,13 @@
+
+<div>
+
+    <h2>
+        <button (click)="restar()"><</button>
+        <span> Curso: {{cursosLista[this.posicion].nombreCurso}} ({{cursosLista[this.posicion].duracion}}h) </span> 
+
+        <button (click)="sumar()">></button>
+    </h2> 
+
+    <h4>Descripción del curso:</h4>
+    <p>{{cursosLista[this.posicion].descripcion}}</p>
+</div>
