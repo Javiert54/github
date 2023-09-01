@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   selector: 'app-inventario',
   templateUrl: './inventario.component.html',
   styleUrls: ['./inventario.component.css'],
-  providers: [ListaserviciosService]
+//   providers: [ListaserviciosService]
 })
 export class InventarioComponent {
 	public productos: any;

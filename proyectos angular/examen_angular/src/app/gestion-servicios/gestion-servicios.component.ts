@@ -6,7 +6,7 @@ import { ListaserviciosService } from '../servicios/listaservicios.service'
   selector: 'app-gestion-servicios',
   templateUrl: './gestion-servicios.component.html',
   styleUrls: ['./gestion-servicios.component.css'],
-  providers: [ListaserviciosService]
+  // providers: [ListaserviciosService]
 })
 export class GestionServiciosComponent implements OnInit{
   public listaServicios: Array<ServiciosBD>
