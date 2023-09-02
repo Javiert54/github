@@ -5,8 +5,8 @@
 		<h3>Lista de deseados:</h3>
 		<div id="productList1">
 			<div class="products" *ngFor="let product of productos">
-				<img src= {{product.productImage}} alt="producto">
-				<br>{{product.productName}}<br>{{product.nombreSer}} {{product.price}}€ <br>
+				<img src= {{product.imagenSer}} alt="producto">
+				<br>{{product.nombreSer}} {{product.PrecioSer}}€ <br>
 				<label for="checkbox">Wish List: <input type="checkbox"></label>
 			</div>
 		</div>

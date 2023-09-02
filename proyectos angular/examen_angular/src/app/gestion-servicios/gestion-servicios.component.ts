@@ -6,7 +6,7 @@ import { ListaserviciosService } from '../servicios/listaservicios.service'
   selector: 'app-gestion-servicios',
   templateUrl: './gestion-servicios.component.html',
   styleUrls: ['./gestion-servicios.component.css'],
-  // providers: [ListaserviciosService]
+  providers: [ListaserviciosService]
 })
 export class GestionServiciosComponent implements OnInit{
   public listaServicios: Array<ServiciosBD>
@@ -26,7 +26,7 @@ export class GestionServiciosComponent implements OnInit{
 
 ngOnInit(): void {
   this.listaServicios = this._listaServicios.getServicios()
-  this.getcodigos();
+  // this.getcodigos();
   this.mensaje = "DISPONIBLE";
 
   // this.listaServicios.forEach(element => {
@@ -34,13 +34,13 @@ ngOnInit(): void {
   // });
 
 }
-getcodigos(){
-  this.listaServicios.forEach((codigo)=>{
-    this.codServicios.push(codigo.codSer);
-    this.listaChecks.push(codigo.wishList);
-  })
-  return this.listaChecks;
- }
+// getcodigos(){
+//   this.listaServicios.forEach((codigo)=>{
+//     this.codServicios.push(codigo.codSer);
+//     // this.listaChecks.push(codigo.wishList);
+//   })
+//   return this.listaChecks;
+//  }
 
  addContrato(){
 
