@@ -1,0 +1,22 @@
+main{
+    padding: 0.5em;
+    text-align: center;
+    
+}
+.input{
+    margin: 0.25em;
+    width: 20em;
+    background-color: #0d3f7c;
+    border-radius: 2em;
+    color: #ffffff;
+    padding: 1em;
+}
+.textinput{
+    height: 3em;
+}
+input::placeholder{
+    text-align: center;
+}
+#submit{
+    height: 3em;
+}

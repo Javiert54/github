@@ -1,0 +1,22 @@
+footer {
+
+    text-align: center;
+    background-color: rgb(40, 74, 148);
+}
+footer nav {
+    display: inline;
+}
+footer nav a {
+    text-decoration: none;
+    padding-right: 0.8em;
+}
+footer nav a:link {
+    color: black
+}
+footer nav a:visited {
+    color: rgb(172, 199, 18)
+}
+/* EL :HOVER TIENE QUE ESTAR DESPUÉS DE LINK Y VISITED! */
+footer nav a:hover {
+    color: white;
+}

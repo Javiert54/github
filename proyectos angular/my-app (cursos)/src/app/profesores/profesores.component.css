@@ -1,0 +1,17 @@
+
+ul{
+    list-style: none;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 1em 0.5em; 
+    justify-items: center;
+}
+li{
+
+    height: 8em;
+    width: 25em;
+    background-color: #0d3f7c;
+    font-size: larger;
+    padding: 1em;
+    border-radius: 1em;
+}
