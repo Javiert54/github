@@ -9,9 +9,9 @@ app.listen(port,()=>{
 	console.log("La aplicación está en línea");
 });
 const userRoutes = require('./routes/userRoutes');
-const cursoRoutes = require('./routes/cursoRoutes');
 
-app.use(userRoutes, cursoRoutes);
+
+app.use(userRoutes);
 
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
