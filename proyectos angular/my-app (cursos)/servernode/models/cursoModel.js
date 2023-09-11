@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const CursoSchema = new mongoose.Schema(
 	{
 
-		Codigo: {
+		codigo: {
 			type: Number
 		},
-		name: {
+		nombreUsuario: {
 			type: String
 		},
 		codigoTarea: {
