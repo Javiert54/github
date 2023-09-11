@@ -3,17 +3,20 @@ const mongoose = require('mongoose');
 const CursoSchema = new mongoose.Schema(
 	{
 
-		nombreCurso: {
-			type: String
-		},
-		duracion: {
+		Codigo: {
 			type: Number
 		},
-		descripcion: {
+		name: {
 			type: String
 		},
-		fotoPortada: {
+		codigoTarea: {
+			type: Number
+		},
+		puntuacion: {
 			type: String
+		},
+		estado: {
+			type: Boolean
 		}
 
 	}
