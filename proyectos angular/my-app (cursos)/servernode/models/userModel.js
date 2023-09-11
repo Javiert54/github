@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const CursoSchema = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
 	{
 		_id:String,
 		codigo: Number,
@@ -12,4 +12,4 @@ const CursoSchema = new mongoose.Schema(
 	}
 );
 
-module.exports = mongoose.model('curso', CursoSchema);
+module.exports = mongoose.model('user', UserSchema);
