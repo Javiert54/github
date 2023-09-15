@@ -1,1 +1,27 @@
-<p>alumno works!</p>
+<main>
+	<mat-form-field class="example-full-width">
+		<mat-label>Buscar un alumno</mat-label>
+		<input type="text" matInput [formControl]="searchAlumno" [matAutocomplete]="auto">
+		<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+		  <mat-option *ngFor="let alumno of filteredOptions | async" [value]="alumno" (onSelectionChange)="console(alumno)">
+			{{alumno.userName}}
+		  </mat-option>
+		</mat-autocomplete>
+	  </mat-form-field>
+	<h2>
+				<span> Nombre del alumno: {{listaAlumnos[this.posicion].userName}} ({{listaAlumnos[this.posicion].age}}
+					años)</span>
+	</h2>
+	<div id="infoalumno">
+		<img id="alumnoimg" src={{listaAlumnos[this.posicion].photo}} alt="foto de alumno">
+
+		<ul>
+			<li>Apellidos: {{listaAlumnos[posicion].lastName}}</li>
+			<li>Correo: {{listaAlumnos[this.posicion].email}}</li>
+			<li>Teléfono: {{listaAlumnos[this.posicion].telephone}}</li>
+			<li *ngIf="listaAlumnos[this.posicion].state">APROBADO</li>
+			<li *ngIf="!listaAlumnos[this.posicion].state">SUSPENDIDO</li>
+		</ul>
+	</div>
+
+</main>

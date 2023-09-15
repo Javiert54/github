@@ -1,1 +1,49 @@
-<p>profesor works!</p>
+<div>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Buscar un profesor</mat-label>
+        <input type="text" matInput [formControl]="searchProfesor" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let profesor of filteredOptions | async" [value]="profesor" (onSelectionChange)="console(profesor)">
+            {{profesor.userName}} {{profesor.lastName}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+    <h2>
+        <span> Profesor: {{profesoresLista[this.posicion].userName}} ({{profesoresLista[this.posicion].age}} años) </span> 
+    </h2> 
+    <!-- <div id="infoprofesor">
+        <img id="profesorimg" src= {{profesoresLista[this.posicion].photo}} alt="foto de profesor">
+        <ul>
+
+            <li>Apellidos: {{profesoresLista[this.posicion].lastName}}</li>
+            <li>Correo: {{profesoresLista[this.posicion].email}}</li>
+            <li>Asignatura: {{profesoresLista[this.posicion].subget}}</li>
+        </ul>
+    </div> -->
+
+
+
+      <mat-card class="example-card">
+
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{profesoresLista[this.posicion].userName}} {{profesoresLista[this.posicion].lastName}}</mat-card-title>
+            <mat-card-subtitle id="age">{{profesoresLista[this.posicion].age}} años</mat-card-subtitle>
+           </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+
+            <ul id="datosProfesor">
+                <li class="datosProfesor">Teléfono: +34 {{profesoresLista[this.posicion].telephone}}</li>
+                <li class="datosProfesor">Correo: {{profesoresLista[this.posicion].email}}</li>
+                <li class="datosProfesor">Asignatura: {{profesoresLista[this.posicion].subget}}</li>
+            </ul>
+
+            <img mat-card-xl-image src={{profesoresLista[this.posicion].photo}} class="profesorImg"  alt="foto de profesor">
+
+        </mat-card-content>
+      </mat-card>
+
+</div>

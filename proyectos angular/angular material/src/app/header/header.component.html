@@ -1,12 +1,17 @@
-<div class="header">
-    <ul class="float-end">
-        
-        <li><a routerLink="/">Inicio</a></li>
-        <li><a routerLink="/acceso">Acceso</a></li>
-        <li><a routerLink="/cursos">Cursos</a></li>
-        <li><a routerLink="/alumnos">Alumnos</a></li>
-        <li><a routerLink="/registro">Registro</a></li>
-        <li><a routerLink="/tareas">tareas</a></li>
-        <li><a routerLink="/contacto">Contacto</a></li>
-       </ul>
-</div>
+<header>
+    <div>
+        <img id="logo" src="./assets/media/logo.png" alt="">
+    </div>
+    <div id="menu">
+        <nav>
+            <ul>
+                <li><a class="headerlink" routerLink="/cursos">Cursos</a></li>
+                <li><a class="headerlink" routerLink="/alumnos">Alumnos</a></li>
+                <li><a class="headerlink" routerLink="/profesores">Profesores</a></li>
+                <li><a class="headerlink" routerLink="/consulta">Contacto</a></li>
+                <li><a class="headerlink" routerLink="/crearCurso">Crear Curso</a></li>
+            </ul>
+        </nav>
+        <app-formulario-acceso></app-formulario-acceso>
+    </div>
+</header>

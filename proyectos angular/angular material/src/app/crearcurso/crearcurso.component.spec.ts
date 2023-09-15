@@ -1,16 +1,23 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/* tslint:disable:no-unused-variable */
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { DebugElement } from '@angular/core';
 
-import { CrearcursoComponent } from './crearcurso.component';
+import { CrearCursoComponent } from './crearCurso.component';
 
-describe('CrearcursoComponent', () => {
-  let component: CrearcursoComponent;
-  let fixture: ComponentFixture<CrearcursoComponent>;
+describe('CrearCursoComponent', () => {
+  let component: CrearCursoComponent;
+  let fixture: ComponentFixture<CrearCursoComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ CrearCursoComponent ]
+    })
+    .compileComponents();
+  }));
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [CrearcursoComponent]
-    });
-    fixture = TestBed.createComponent(CrearcursoComponent);
+    fixture = TestBed.createComponent(CrearCursoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

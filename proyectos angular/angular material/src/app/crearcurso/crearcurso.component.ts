@@ -1,70 +1,48 @@
 import { Component, OnInit } from '@angular/core';
-import { Curso } from '../Models/curso';
-import { save_cursoService} from '../servicios/curso.service';
-import { UploadService } from '../servicios/upload.service';
+import { curso } from '../modelos/cursos';
 import { Global } from '../servicios/global';
+import { save_cursoService } from '../servicios/curso.service';
+
 
 @Component({
-  selector: 'app-crearcurso',
-  templateUrl: './crearcurso.component.html',
-  styleUrls: ['./crearcurso.component.css'],
-  providers: [save_cursoService, UploadService]
-
-
+	selector: 'app-crearCurso',
+	templateUrl: './crearCurso.component.html',
+	styleUrls: ['./crearCurso.component.css'],
+	providers: [save_cursoService]
 })
-export class CrearcursoComponent implements OnInit {
 
-  public title: string;
-	public curso: Curso;
+export class CrearCursoComponent implements OnInit {
+	public title: string;
+	public curso: curso;
 	public save_curso: any;
 	public status: any;
-	public filesToUpload: Array<File> = [];
+	public result:any
 
-	constructor(
-		private _cursoService: save_cursoService,
-		private _uploadService: UploadService
-	){
+	constructor(private _cursoService: save_cursoService) {
 		this.title = "Crear Curso";
-		this.curso = new Curso('','','','',6,'','');
+		this.curso = new curso(0, '', 500, '', [], '', '');
+		this.result = null
+		// this.curso = new curso()
+		// curso.nombreCurso= ''
+		// title = "titulo";
+
 	}
 
 	ngOnInit() {
+
 	}
-
-	onSubmit(form: { reset: () => void; }){
-		
-		// Guardar datos básicos
-		this._cursoService.saveCurso(this.curso).subscribe(
-			response => {
-				if(response.curso){
-					
-					// Subir la imagen
-					if(this.filesToUpload){
-						this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.curso._id, [], this.filesToUpload, 'image')
-						.then((result:any) => {
-
-							this.save_curso = result.curso;
-
-							this.status = 'success';
-							form.reset();
-						});
-					}else{
-						this.save_curso = response.curso;
-						this.status = 'success';
-						form.reset();
-					}
-					
-				}else{
-					this.status = 'failed';
-				}
-			},
-			error => {
-				console.log(<any>error);
+	onSubmit(form: {reset:() => void}) {
+		this._cursoService.saveCurso(this.curso).subscribe(response => {
+			
+			if(response.curso){
+				this.save_curso = this.result.curso;
+				this.status = 'success';
+				form.reset();
+			}else{
+				this.status = "failed";
 			}
-		);
-	}
-
-	fileChangeEvent(fileInput: any){
-		this.filesToUpload = <Array<File>>fileInput.target.files;
+		});
+		
 	}
 }
+

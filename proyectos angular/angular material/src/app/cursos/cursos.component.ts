@@ -1,41 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
-import { GcursoService } from '../servicios/gcurso.service';
-import { GCurso } from '../Models/gcurso';
+import { CursosService } from '../servicios/cursos.service';
+import { Router } from '@angular/router';
+import { curso } from '../modelos/cursos';
 
+export var posicion : Number;
 @Component({
-  selector: 'app-cursos',
-  templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css'],
+	selector: 'app-cursos',
+	templateUrl: './cursos.component.html',
+	styleUrls: ['./cursos.component.css'],
+	providers: [CursosService]
 })
-export class CursosComponent implements OnInit{
 
-  listCursos: GCurso[] = []
-  // toastr: any;
 
-constructor(private _gcursoService: GcursoService,
-            private toastr: ToastrService ){
-  
+
+
+export class CursosComponent implements OnInit {
+
+
+
+	public cursos: Array<curso>
+
+
+	constructor(private _CursosService: CursosService, private router: Router) {
+
+		this.cursos = Array<curso>()
+
+	}
+	cursoExpediente(posicionbutton:Number){
+
+		posicion = posicionbutton;
+		this.router.navigate(['/curso']);
+
+	}
+	ngOnInit(): void {
+		this.cursos = this._CursosService.getCursos();
+		// console.log(this.cursos.length);
+
+	}
+
+
+
 }
-  ngOnInit(): void{
-this.obtenerCursos()
-  }
-  obtenerCursos() {
-    this._gcursoService.getCursos().subscribe(data => {
-      console.log(data);
-      this.listCursos = data;
-    }, error => {
-      console.log(error);
-    })
-  }
-  eliminarCurso(id: any) {
-    this._gcursoService.eliminarCurso(id).subscribe(data => {
-      this.toastr.error('El curso fue eliminado con exito' ,'Curso Eliminado');
-      this.obtenerCursos();
-    }, error => {
-      console.log(error);
-    })
-  }
 
-
-}

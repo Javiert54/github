@@ -1,49 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { profesorBase } from '../Models/alumnos';
-import { alumnosBD } from '../Models/alumnos';
-import { CursosService } from '../servicios/cursos.service';
+import { AlumnosService } from '../servicios/alumnos.service';
+import { alumnoFicha } from '../modelos/alumnos';
+import { Router } from '@angular/router';
+import {NgFor} from '@angular/common';
+// import {MatGridListModule} from '@angular/material/grid-list';
+
+export var posicion = 0;
 
 @Component({
-  selector: 'app-alumnos',
-  templateUrl: './alumnos.component.html',
-  styleUrls: ['./alumnos.component.css'],
-  providers: [CursosService]
+	selector: 'app-alumnos',
+	templateUrl: './alumnos.component.html',
+	styleUrls: ['./alumnos.component.css'],
+	providers: [AlumnosService],
+
 })
 
 
 export class AlumnosComponent implements OnInit {
-  public nombreProfesor: string;
-  public fotoProfesor: string;
-  public alumnosall: Array<alumnosBD>;
-  public correosEle: string[] = [];
-  public notaAlumno: number = 5;
-  public Nota: number = 0;
-  public registrado: boolean = false;
+	items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+	expandedIndex = 0;
+	public Alumnos: any[];
+	constructor(private _alumnosService: AlumnosService, private router: Router) {
+		this.Alumnos = new Array<alumnoFicha>()
 
-  constructor(private _cursosService: CursosService) {
-    this.alumnosall = new Array<alumnosBD>()
-    this.nombreProfesor = profesorBase.nombre;
-    this.fotoProfesor = profesorBase.foto;
-  }
+	}
 
-  ngOnInit(): void {
-    this.alumnosall = this._cursosService.getAlumnos();
-    this.getcorreosEle();
-  }
 
-  getcorreosEle() {
-    this.alumnosall.forEach((alumno) => {
-      this.correosEle.push(alumno.correoA);
-    });
-    console.log(this.correosEle);
-  }
 
-  setRegistrado() {
-    this.registrado = true;
-  }
+	expedienteAlumno(posicionbutton:number){
 
-  unsetRegistrado() {
-    this.registrado = false;
-  }
+		posicion = posicionbutton;
+		this.router.navigate(['/alumno']);
+
+	}
+
+	ngOnInit(): void {
+		this.Alumnos = this._alumnosService.getAlumnos()/*.filter( (alumno:any) => {alumno.isProfessor == false })*/;
+		console.log(this.Alumnos);
+	}
+
 }
-
