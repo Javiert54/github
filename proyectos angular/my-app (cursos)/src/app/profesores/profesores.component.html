@@ -1,11 +1,17 @@
 <main>
     <h2>Profesores: </h2>
-    <ul>
-        <li *ngFor="let profesor of profesoresLista">
-            <h3>nombre del profesor: {{profesor.nombre}} ({{profesor.edad}} años)</h3>
-			<h4>Apellidos: </h4>{{profesor.apellidos}}<br><h4>Asignatura: </h4>{{profesor.asignatura}}
-            Ficha del profesor: <button (click)="expedienteProfesor( profesor.id )">expediente</button>
-        </li>
-    </ul>
+    <mat-grid-list id="gridAlumnos" cols="4" rowHeight="2:1.1">
+        <mat-grid-tile *ngFor="let profesor of profesoresLista">
+            <div>
+                <div class="profesor">
+                    <h2>Datos del profesor:</h2>
+                    <h5>Nombre: {{profesor.userName}}<br>
+                    Edad: {{profesor.age}} años<br>
+                    Apellidos: {{profesor.lastName}}<br>Asignatura: {{profesor.subject}}</h5><br>
+                    Ficha del profesor: <button (click)="expedienteProfesor( profesoresLista.indexOf(profesor))">expediente</button>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
 
 </main>

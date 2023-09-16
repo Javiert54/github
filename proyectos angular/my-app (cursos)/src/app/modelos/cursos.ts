@@ -7,11 +7,11 @@ export class curso{
     static _id: string;
     constructor(
 
-        public _id: String,
+        public id: Number,
         public name: String,
         public duration: Number,
         public description: String,
-        public temario: String,
+        public temario: Array<String>,
         public category: String,
         public fotoPortada: String
 

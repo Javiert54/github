@@ -17,28 +17,52 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CrearCursoComponent } from './crearCurso/crearCurso.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+// import {MatToolbarModule} from '@angular/material/toolbar';
+// import {MatToolbarHarness} from '@angular/material/toolbar/testing';
+import {MatSelectModule} from '@angular/material/select';
+import { SelectComponent } from './select/select.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [	
     AppComponent,
     CursosComponent,
-    CursoComponent,
-    AlumnosComponent,
-    AlumnoComponent,
+
     ProfesoresComponent,
-    ProfesorComponent,
+
     FormularioAccesoComponent,
     FormularioRegistroComponent,
     FormularioConsultaComponent,
     HeaderComponent,
     FooterComponent,
-      CrearCursoComponent
+    CrearCursoComponent,
+
+    SelectComponent,
+
+    AlumnosComponent,
    ],
   imports: [
+    ProfesorComponent,
+    CommonModule,
+    CursoComponent,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    MatCardModule,
+    //ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    // MatToolbarModule,
+    AlumnoComponent,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

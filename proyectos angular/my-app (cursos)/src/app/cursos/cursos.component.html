@@ -5,8 +5,10 @@
         <ul>
             <li  *ngFor="let curso of cursos">
                 <h4>nombre del curso: {{curso.name}} ({{curso.duration}}h)</h4>
+                <h4>Temario:{{curso.temario}}</h4>
                 <h5>Descripción:</h5>
                 <p>{{curso.description}}</p>
+                <button (click)="cursoExpediente(curso.id)">expediente</button>
             </li>
         </ul>
     </div>
