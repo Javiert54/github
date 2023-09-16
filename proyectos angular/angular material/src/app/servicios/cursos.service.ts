@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Injectable } from "@angular/core";
 import { curso } from "../modelos/cursos";
-import { ProfesoresService } from "./profesores.service";
+
+
 @Injectable({
     providedIn: 'root'
 })
