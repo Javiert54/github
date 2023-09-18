@@ -1,0 +1,29 @@
+<!-- <select [(ngModel)]="posicion" name="alumnoSelect" id="alumnoSelect" onblur='this.size=1;' onfocus='this.size=5;' >
+    <option *ngFor="let curso of cursosLista" value ={{curso.id}}>{{curso.name}}</option>
+</select> -->
+
+
+<mat-form-field class="example-full-width">
+  <mat-label>Buscar un curso</mat-label>
+  <input type="text" matInput [formControl]="searchCurso" [matAutocomplete]="auto">
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+    <mat-option *ngFor="let curso of filteredOptions | async" [value]="curso" (onSelectionChange)="console(curso)">
+      {{curso.name}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+
+<div>
+
+    <h2>
+        <span> Curso: {{cursosLista[this.posicion].name}} ({{cursosLista[this.posicion].duration}}h) </span> 
+    </h2> 
+    <img src={{cursosLista[this.posicion].fotoPortada}} alt="">
+    <h4>Categoría: {{cursosLista[this.posicion].category}}</h4>
+    <h4>Temario: {{cursosLista[this.posicion].temario}}</h4>
+    <h4>Descripción del curso:</h4>
+    <p>{{cursosLista[this.posicion].description}}</p>
+
+</div>
+<!-- <button (click)="console()">hola</button> -->
