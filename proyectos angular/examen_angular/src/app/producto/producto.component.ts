@@ -17,6 +17,7 @@ export class ProductoComponent {
 
 }
 export const productos = [
+	webkitURL
 	new ProductoModelComponent('Alexa','./assets/media/products/producto1.jpg', 100.99, false),
 	new ProductoModelComponent('Reloj','./assets/media/products/producto2.jpg', 199.99, false),
 	new ProductoModelComponent('Cafetera','./assets/media/products/producto5.jpg', 49.99, true),

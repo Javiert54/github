@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 #alumnoimg{
@@ -64,4 +65,72 @@ li{
 }
 mat-card-content{
     display: flex;
+=======
+
+
+#alumnoimg{
+
+    height: 22em;
+}
+
+span{
+    font-size: larger;
+}
+#infoalumno{
+    padding: 1.5em;
+    display: flex;
+    background-color: #0d3f7c;
+    border-radius: 1.5em;
+    width: 50em;
+}
+ul{
+    padding-top: 0.5em;
+}
+li{
+    padding-top: 0.5em;
+    font-size: larger;
+    color: #dedcdc;
+}
+.example-form {
+	min-width: 150px;
+	max-width: 500px;
+	width: 100%;
+}
+
+.example-full-width {
+	width: 20%;
+}
+
+
+
+ul{
+    padding-top: 0.5em;
+}
+li{
+    padding-top: 0.5em;
+    font-size: larger;
+    color: #dedcdc;
+}
+.example-card {
+  max-width: 550px;
+  margin-bottom: 8px;
+  color: black;
+}
+.alumnoImg{
+    height: 15em;
+    margin-left: 4em;
+}
+#age{
+    font-size:medium;
+}
+.datosAlumno{
+    color: black;
+}
+#datosAlumno{
+    list-style: none;
+    padding-left: 0.5em;
+}
+mat-card-content{
+    display: flex;
+>>>>>>> 326f0fcef1c28f340edb16eec4d1c172c45869ac
 }
