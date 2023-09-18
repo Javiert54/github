@@ -1,0 +1,12 @@
+.container{
+	flex-direction: row;
+	text-align: center;
+}
+input{
+	border-radius: 1em;
+	width: 20em;
+}
+textarea{
+	border-radius: 1em;
+	width: 20em;
+}
