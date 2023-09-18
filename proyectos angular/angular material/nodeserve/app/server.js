@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const conectarDB = require('./config/db')
+const conectarDB = require('../config/db')
 const cors = require("cors")
 
 // Creamos el servidor
