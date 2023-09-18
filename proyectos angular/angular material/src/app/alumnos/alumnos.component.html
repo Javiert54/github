@@ -8,7 +8,7 @@
               <h5>Nombre: {{listado.userName}}<br>
               Apellidos: {{listado.lastName}}<br>
               Edad: {{listado.age}}</h5><br>
-              Ficha del alumno: <button (click)="expedienteAlumno( listado.id )">expediente</button>
+              Ficha del alumno: <button (click)="expedienteAlumno( Alumnos.indexOf(listado))">expediente</button>
             </div>
           </div>
         </mat-grid-tile>

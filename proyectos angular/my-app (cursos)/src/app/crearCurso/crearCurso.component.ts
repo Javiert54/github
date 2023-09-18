@@ -20,7 +20,7 @@ export class CrearCursoComponent implements OnInit {
 
 	constructor(private _cursoService: save_cursoService) {
 		this.title = "Crear Curso";
-		this.curso = new curso('', '', 500, '', '', '', '');
+		this.curso = new curso(0, '', 500, '', [], '', '');
 		this.result = null
 		// this.curso = new curso()
 		// curso.nombreCurso= ''

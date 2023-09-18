@@ -23,3 +23,45 @@ li{
     font-size: larger;
     color: #dedcdc;
 }
+.example-form {
+	min-width: 150px;
+	max-width: 500px;
+	width: 100%;
+}
+
+.example-full-width {
+	width: 20%;
+}
+
+
+
+ul{
+    padding-top: 0.5em;
+}
+li{
+    padding-top: 0.5em;
+    font-size: larger;
+    color: #dedcdc;
+}
+.example-card {
+  max-width: 550px;
+  margin-bottom: 8px;
+  color: black;
+}
+.alumnoImg{
+    height: 15em;
+    margin-left: 4em;
+}
+#age{
+    font-size:medium;
+}
+.datosAlumno{
+    color: black;
+}
+#datosAlumno{
+    list-style: none;
+    padding-left: 0.5em;
+}
+mat-card-content{
+    display: flex;
+}

@@ -1,17 +1,18 @@
 
-ul{
-    list-style: none;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 1em 0.5em; 
-    justify-items: center;
-}
-li{
-
-    height: 8em;
-    width: 25em;
+.profesor{
+    margin: 10em;
+    height: 13em;
+    width: 20em;
     background-color: #0d3f7c;
     font-size: larger;
     padding: 1em;
-    border-radius: 1em;
+    border-radius: 1.5em;
+    border: 1px solid black;
+    /* margin-top: 10em; */
+    color: rgb(255, 255, 255);
+}
+.profesor button{
+    border-radius: 0.4em;
+    background-color: #04254e;
+    color: rgb(255, 255, 255);
 }

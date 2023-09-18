@@ -13,7 +13,7 @@ import { FormularioConsultaComponent } from './formulario-consulta/formulario-co
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
-
+import { SelectComponent } from './select/select.component';
 
 
 
@@ -22,6 +22,7 @@ import { ProfesoresComponent } from './profesores/profesores.component';
 
 
 const routes: Routes = [
+  {path: "select", component:SelectComponent},
   {path: "alumno", component:AlumnoComponent},
   {path: "alumnos", component:AlumnosComponent},
   {path: "curso", component:CursoComponent},

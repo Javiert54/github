@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ProfesoresService } from '../servicios/profesores.service';
+
+import { userFicha } from '../modelos/user';
+import { UsersService } from '../servicios/users.service';
 import { Router } from '@angular/router';
-import { profesor } from '../modelos/profesores';
 
 export var posicion = 0;
 
@@ -9,7 +10,7 @@ export var posicion = 0;
   selector: 'app-profesores',
   templateUrl: './profesores.component.html',
   styleUrls: ['./profesores.component.css'],
-  providers: [ProfesoresService]
+  providers: [UsersService]
 })
 
 
@@ -23,16 +24,16 @@ export class ProfesoresComponent implements OnInit {
 
 	// public cursonombre: String
 	// public cursodescripcion: String
-	public profesoresLista: Array<profesor>
+	public profesoresLista: Array<userFicha>
 
 	// public nombreCurso: String
 	// public descripcion: String
 	// public duracion: String
 
 
-	constructor(private _ProfesoresService: ProfesoresService, private router: Router) {
+	constructor(private _ProfesoresService: UsersService, private router: Router) {
 
-		this.profesoresLista = Array<profesor>()
+		this.profesoresLista = Array<userFicha>()
 
 
 	}

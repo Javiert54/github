@@ -9,18 +9,21 @@ export var alumnoBase = {
 
 
 
-export class alumnoFicha {
+export class userFicha {
+    static _id: string;
 	constructor (
-		public userName: String,
-		public lastName: String,
-		public age: Number,
-		public email: String,
-		public telephone: String,
-		public password: String,
-		public photo: String,
-		public state: Boolean,
-		public isProfessor: Boolean,
-		public id: Number,
+		public userName: string,
+		public lastName: string,
+		public age: number,
+		public email: string,
+		public telephone: number,
+		public password: string,
+		public photo: string,
+		public state: boolean,
+		public dni: string,
+		public isProfessor: boolean,
+		public subject: string
+
 
 	){}
 
@@ -35,7 +38,7 @@ export class alumnosBD {
 		// public telefono: String,
 		// public fotoA: String,
 		// public estadoA: Boolean,
-		public listaAlumnos: Array<alumnoFicha>
+		public listaAlumnos: Array<userFicha>
 	){
 
 

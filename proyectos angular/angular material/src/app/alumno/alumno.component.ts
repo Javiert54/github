@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AlumnosService } from '../servicios/alumnos.service';
-import { alumnoFicha } from "../modelos/alumnos";
+import { UsersService } from '../servicios/users.service';
+import { userFicha } from "../modelos/user";
 
 import { posicion } from '../alumnos/alumnos.component';
-import {MatSelectModule} from '@angular/material/select';
+
+
 
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Observable} from 'rxjs';
@@ -13,13 +14,13 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
-
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
 	selector: 'app-alumno',
 	templateUrl: './alumno.component.html',
 	styleUrls: ['./alumno.component.css'],
-	providers: [AlumnosService],
+	providers: [UsersService],
 		standalone: true,
 	imports: [
 	  FormsModule,
@@ -29,14 +30,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 	  ReactiveFormsModule,
 	  NgFor,
 	  AsyncPipe,
-	  CommonModule
+	  CommonModule,
+	  MatCardModule
 	],
 })
 
 export class AlumnoComponent implements OnInit {
 
-	searchAlumno = new FormControl<string | alumnoFicha>('');
-	filteredOptions: Observable<alumnoFicha[]>;
+	searchAlumno = new FormControl<string | userFicha>('');
+	filteredOptions: Observable<userFicha[]>;
 
 
 	public listaAlumnos: any[];
@@ -45,39 +47,39 @@ export class AlumnoComponent implements OnInit {
 	
 
 
-	constructor(private _alumnosService: AlumnosService) {
+	constructor(private UsersService: UsersService) {
 	
 		this.posicion=posicion
-		this.listaAlumnos = new Array<alumnoFicha>();
+		this.listaAlumnos = new Array<userFicha>();
 		this.filteredOptions= new Observable()
 	}
 
 	ngOnInit(): void {
 
-		this.listaAlumnos = this._alumnosService.getAlumnos();
+		this.listaAlumnos = this.UsersService.getAlumnos();
 
 
 		this.filteredOptions = this.searchAlumno.valueChanges.pipe(
 			startWith(''),
 			map(value => {
 			  const userName = typeof value === 'string' ? value : value?.userName;
-			  return userName ? this._filter(userName as string) : this.listaAlumnos.slice();
+			  return userName ? this._filter(userName as string) : this.listaAlumnos;
 			}),
 		  );
 
 	}
-	displayFn(alumno: alumnoFicha): any {
+	displayFn(alumno: userFicha): any {
 
-		return alumno ? `${alumno.userName}` : undefined;
+		return alumno ? `${alumno.userName} ${alumno.lastName} (${alumno.dni})` : undefined;
 	}
 
-	private _filter(userName: string): alumnoFicha[] {
+	private _filter(userName: string): userFicha[] {
 		const filterValue = userName.toLowerCase();
 	
-		return this.listaAlumnos.filter(option => option.userName.toLowerCase().includes(filterValue));
+		return this.listaAlumnos.filter(option => (option.userName + " " + option.lastName + " (" + option.dni + ")" ).toLowerCase().includes(filterValue));
 	  }
 	
-	  console(alumno:alumnoFicha){
-		this.posicion = alumno.id;
+	  console(alumnoIndex:number){
+		this.posicion = alumnoIndex;
 	}
 }
