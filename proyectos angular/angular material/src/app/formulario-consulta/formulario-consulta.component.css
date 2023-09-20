@@ -1,22 +1,26 @@
-main{
-    padding: 0.5em;
-    text-align: center;
-    
+.container{
+	flex-direction: row;
+	text-align: center;
 }
-.input{
-    margin: 0.25em;
-    width: 20em;
+input{
+	border-radius: 1em;
+	width: 20em;
     background-color: #0d3f7c;
-    border-radius: 2em;
-    color: #ffffff;
-    padding: 1em;
-}
-.textinput{
-    height: 3em;
+	color: white;
+	padding: 1em;
+    margin: 1em;
 }
 input::placeholder{
     text-align: center;
 }
-#submit{
-    height: 3em;
+textarea{
+	border-radius: 1em;
+	width: 20em;
+	height: 10em;
+	background-color: #0d3f7c;
+	color: white;
+	padding: 1em;
+}
+textarea::placeholder{
+    text-align: center;
 }

@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 @Injectable({
     providedIn: 'root'
 })
-export class curso{
+export class message{
     static _id: string;
     constructor(
 

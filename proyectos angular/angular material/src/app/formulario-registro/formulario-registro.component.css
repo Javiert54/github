@@ -1,0 +1,14 @@
+.container{
+	flex-direction: row;
+	text-align: center;
+}
+input{
+	border-radius: 1em;
+	width: 20em;
+    background-color: #0d3f7c;
+	color: white;
+	padding: 1em;
+}
+input::placeholder{
+    text-align: center;
+}

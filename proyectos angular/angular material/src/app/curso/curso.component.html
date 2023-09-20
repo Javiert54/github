@@ -7,7 +7,7 @@
   <mat-label>Buscar un curso</mat-label>
   <input type="text" matInput [formControl]="searchCurso" [matAutocomplete]="auto">
   <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-    <mat-option *ngFor="let curso of filteredOptions | async" [value]="curso" (onSelectionChange)="console(curso)">
+    <mat-option *ngFor="let curso of filteredOptions | async" [value]="curso" (onSelectionChange)="console(cursosLista.indexOf(curso))">
       {{curso.name}}
     </mat-option>
   </mat-autocomplete>

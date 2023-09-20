@@ -16,11 +16,12 @@ export class CrearCursoComponent implements OnInit {
 	public curso: curso;
 	public save_curso: any;
 	public status: any;
-	public result:any
-
+	public result:any;
+	public temarioString: string;
 	constructor(private _cursoService: save_cursoService) {
 		this.title = "Crear Curso";
-		this.curso = new curso(0, '', 500, '', [], '', '');
+		this.temarioString = String();
+		this.curso = new curso('', 500, '', [], '', '');
 		this.result = null
 		// this.curso = new curso()
 		// curso.nombreCurso= ''
@@ -32,6 +33,7 @@ export class CrearCursoComponent implements OnInit {
 
 	}
 	onSubmit(form: {reset:() => void}) {
+		this.curso.temario = this.temarioString.split(', ')
 		this._cursoService.saveCurso(this.curso).subscribe(response => {
 			
 			if(response.curso){

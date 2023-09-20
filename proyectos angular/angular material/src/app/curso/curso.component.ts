@@ -58,7 +58,6 @@ export class CursoComponent implements OnInit {
 	}
 
 	displayFn(curso: curso): any {
-		this.posicion = curso.id;
 		return curso ? `${curso.name}` : undefined;
 	}
 
@@ -69,11 +68,11 @@ export class CursoComponent implements OnInit {
 	  }
 
 
-	console(curso:curso){
+	console(cursoIndex: number){
 		// for (const element in this.searchCurso) {
 		// 	console.log(element);
 		// }
-		this.posicion = curso.id;
+		this.posicion = cursoIndex;
 		console.log((this.searchCurso), this.searchCurso.value)
 	}
 }

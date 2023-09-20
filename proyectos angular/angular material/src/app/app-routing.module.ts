@@ -10,7 +10,7 @@ import { CursoComponent } from './curso/curso.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso.component';
 import { FormularioConsultaComponent } from './formulario-consulta/formulario-consulta.component';
-import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
+import { CrearUserComponent } from './formulario-registro/formulario-registro.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { SelectComponent } from './select/select.component';
@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: "cursos", component:CursosComponent},
   {path: "acceso", component:FormularioAccesoComponent},
   {path: "consulta", component:FormularioConsultaComponent},
-  {path: "registro", component:FormularioRegistroComponent},
+  {path: "registro", component:CrearUserComponent},
   {path: "profesor", component:ProfesorComponent},
   {path: "profesores", component:ProfesoresComponent},
   {path: "crearCurso", component:CrearCursoComponent}

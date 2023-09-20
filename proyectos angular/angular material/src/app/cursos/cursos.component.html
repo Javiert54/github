@@ -8,7 +8,7 @@
                 <h4>Temario:{{curso.temario}}</h4>
                 <h5>Descripción:</h5>
                 <p>{{curso.description}}</p>
-                <button (click)="cursoExpediente(curso.id)">expediente</button>
+                <button (click)="cursoExpediente(cursos.indexOf(curso))">expediente</button>
             </li>
         </ul>
     </div>

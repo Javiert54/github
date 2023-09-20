@@ -1,1 +1,38 @@
-<p>formulario-registro works!</p>
+<div class="container">
+	<h2>Registrarse</h2>
+  
+	<div class="message success" *ngIf="status == 'success'">
+	  Se ha registrado correctamente. Puedes ver tu perfil<a [routerLink]="['/user', save_user._id]">aquí</a>
+	</div>
+	<div class="message failed" *ngIf="status == 'failed'">
+	  NO SE HA REGISTRADO CORRECTAMENTE
+	</div>
+  
+	<form #registForm="ngForm" (ngSubmit)="onSubmit(registForm)">
+	  <p>
+  
+		<input placeholder="Nombre de usuraio" type="text" id="userName" name="userName" #userName="ngModel" [(ngModel)]="user.userName" required>
+		<span class="form_error" *ngIf="userName.touched && !userName.valid">El nombre de usuario es obligatorio</span>
+	   
+	  </p>
+	  <p>
+		<input placeholder="Apellidos" #lastName="ngModel" type="text" id="lastName" name="lastName" required [(ngModel)]="user.lastName">
+		<span class="form_error" *ngIf="lastName.touched && !lastName.valid">La descripción es boligatoria</span>
+	  </p>
+	  <p>
+		<input placeholder="Edad" type="number" id="age" name="age" #age="ngModel" [(ngModel)]="user.age" required>
+		<span class="form_error" *ngIf="age.touched && !age.valid">La edad es obligatoria</span>
+	  </p>
+	  <p>
+		<input placeholder="Correo" type="email" id="email" name="email" #email="ngModel" [(ngModel)]="user.email" required>
+		<span class="form_error" *ngIf="email.touched && !email.valid">La duración es obligatoria</span>
+	  </p>
+	  <p>
+		<input placeholder='Teléfono' type="tel" id="telephone" name="telephone" #telephone="ngModel" [(ngModel)]="user.telephone" required>
+		<span class="form_error" *ngIf="telephone.touched && !telephone.valid">El teléfono es obligatorio</span>
+	  </p>
+	  <input type="submit" value="Enviar" [disabled]="!registForm.form.valid">
+	</form>
+  
+  
+  </div>

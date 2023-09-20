@@ -11,7 +11,7 @@ import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso.component';
-import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
+import { CrearUserComponent } from './formulario-registro/formulario-registro.component';
 import { FormularioConsultaComponent } from './formulario-consulta/formulario-consulta.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
@@ -35,7 +35,7 @@ import {MatCardModule} from '@angular/material/card';
     ProfesoresComponent,
 
     FormularioAccesoComponent,
-    FormularioRegistroComponent,
+    CrearUserComponent,
     FormularioConsultaComponent,
     HeaderComponent,
     FooterComponent,

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <main>
 	<mat-form-field class="example-full-width">
 		<mat-label>Buscar un alumno</mat-label>
@@ -35,42 +34,4 @@
 
 			</mat-card-content>
 		</mat-card>
-=======
-<main>
-	<mat-form-field class="example-full-width">
-		<mat-label>Buscar un alumno</mat-label>
-		<input type="text" matInput [formControl]="searchAlumno" [matAutocomplete]="auto">
-		<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-			<mat-option *ngFor="let alumno of filteredOptions | async" [value]="alumno"
-				(onSelectionChange)="console(listaAlumnos.indexOf(alumno))">
-				{{alumno.userName}} {{alumno.lastName}} ({{alumno.dni}})
-			</mat-option>
-		</mat-autocomplete>
-	</mat-form-field>
-	
-		<mat-card class="example-card">
-
-			<mat-card-header>
-				<mat-card-title-group>
-					<mat-card-title>{{listaAlumnos[this.posicion].userName}}
-						{{listaAlumnos[this.posicion].lastName}}</mat-card-title>
-					<mat-card-subtitle id="age">{{listaAlumnos[this.posicion].age}} años</mat-card-subtitle>
-				</mat-card-title-group>
-			</mat-card-header>
-			<mat-card-content>
-
-				<ul id="datosAlumno">
-					<li class="datosAlumno">Teléfono:<br>+34{{listaAlumnos[this.posicion].telephone}}</li>
-					<li class="datosAlumno">Correo:<br>{{listaAlumnos[this.posicion].email}}</li>
-					<li class="datosAlumno">DNI:<br>{{listaAlumnos[this.posicion].dni}}</li>
-					<li class="datosAlumno" *ngIf="listaAlumnos[this.posicion].state">nota:<br>APROBADO</li>
-
-					<li class="datosAlumno" *ngIf="!listaAlumnos[this.posicion].state">Nota:<br>SUSPENDIDO</li>
-				</ul>
-
-				<img mat-card-xl-image src={{listaAlumnos[this.posicion].photo}} class="alumnoImg" alt="foto de alumno">
-
-			</mat-card-content>
-		</mat-card>
->>>>>>> 326f0fcef1c28f340edb16eec4d1c172c45869ac
 </main>
