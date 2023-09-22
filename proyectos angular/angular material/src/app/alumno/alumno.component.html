@@ -14,6 +14,12 @@
 
 			<mat-card-header>
 				<mat-card-title-group>
+					<nav id= "iconMenu">
+						<mat-icon class="icon edit">edit</mat-icon>
+						<mat-icon class="icon delete">delete</mat-icon>
+						<!--Habrá que meter un event listener para la función de esto (el icono de delete, y el de edit)-->	
+					</nav>
+
 					<mat-card-title>{{listaAlumnos[this.posicion].userName}}
 						{{listaAlumnos[this.posicion].lastName}}</mat-card-title>
 					<mat-card-subtitle id="age">{{listaAlumnos[this.posicion].age}} años</mat-card-subtitle>

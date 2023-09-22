@@ -74,7 +74,9 @@ exports.actualizarUsuario = async(req, res) => {
 		user.dni = dni;
 		user.isProfessor = isProfessor;
 		user.subject = subject;
-		user = await userModel.findOneAndUpdate({_id:req.params}, user, {new: true})
+		
+		//No sé si hacía falta poner ".id". Originalmente lo tenía como "_id:req.params"
+		user = await userModel.findOneAndUpdate({  _id:req.params.id   }, user, {new: true})
 		res.json(user);
 	}catch(error){
 		console.log('No se pudo acceder al usuario: ', error)

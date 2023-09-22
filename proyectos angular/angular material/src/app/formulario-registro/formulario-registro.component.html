@@ -1,3 +1,51 @@
+
+
+
+
+<div class="container">
+	<h2>Registrarse</h2>
+  
+	<div class="message success" *ngIf="status == 'success'">
+	  Se ha registrado correctamente. Puedes ver tu perfil<a [routerLink]="['/user', save_user._id]">aquí</a>
+	</div>
+	<div class="message failed" *ngIf="status == 'failed'">
+	  NO SE HA REGISTRADO CORRECTAMENTE
+	</div>
+  
+	<form id="form" #registForm="ngForm" (ngSubmit)="onSubmit(registForm)">
+		
+		<mat-form-field appearance="fill">
+			<mat-label>Nombre de usuario</mat-label>
+			<input type="text" id="userName" name="userName" #userName="ngModel" [(ngModel)]="user.userName" required matInput>
+		</mat-form-field>
+
+		<mat-form-field appearance="fill">
+			<mat-label>Apellidos</mat-label>
+			<input type="text" id="lastName" name="lastName" #lastName="ngModel" [(ngModel)]="user.lastName" required matInput>
+		</mat-form-field>
+		
+		<mat-form-field appearance="fill">
+			<mat-label>Edad</mat-label>
+			<input type="number" id="age" name="age" #age="ngModel" [(ngModel)]="user.age" required matInput>
+		</mat-form-field>
+
+		<mat-form-field appearance="fill">
+			<mat-label>Email</mat-label>
+			<input type="email" matInput  placeholder="Ex. pat@example.com">
+			<mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+				Please enter a valid email address
+			</mat-error>
+			<mat-error *ngIf="emailFormControl.hasError('required')">
+				Email is <strong>required</strong>
+			</mat-error>
+		</mat-form-field>
+	</form>
+</div>
+
+
+
+
+
 <div class="container">
 	<h2>Registrarse</h2>
   
@@ -9,15 +57,18 @@
 	</div>
   
 	<form #registForm="ngForm" (ngSubmit)="onSubmit(registForm)">
-	  <p>
-  
+		<p>
+
+<!-- 
+
+
 		<input placeholder="Nombre de usuraio" type="text" id="userName" name="userName" #userName="ngModel" [(ngModel)]="user.userName" required>
 		<span class="form_error" *ngIf="userName.touched && !userName.valid">El nombre de usuario es obligatorio</span>
 	   
 	  </p>
 	  <p>
 		<input placeholder="Apellidos" #lastName="ngModel" type="text" id="lastName" name="lastName" required [(ngModel)]="user.lastName">
-		<span class="form_error" *ngIf="lastName.touched && !lastName.valid">La descripción es boligatoria</span>
+		<span class="form_error" *ngIf="lastName.touched && !lastName.valid">La edad es boligatoria</span>
 	  </p>
 	  <p>
 		<input placeholder="Edad" type="number" id="age" name="age" #age="ngModel" [(ngModel)]="user.age" required>
@@ -28,10 +79,10 @@
 		<span class="form_error" *ngIf="email.touched && !email.valid">La duración es obligatoria</span>
 	  </p>
 	  <p>
-		<input placeholder='Teléfono' type="tel" id="telephone" name="telephone" #telephone="ngModel" [(ngModel)]="user.telephone" required>
+		<input placeholder='Teléfono' type="text" id="telephone" name="telephone" #telephone="ngModel" [(ngModel)]="user.telephone" required>
 		<span class="form_error" *ngIf="telephone.touched && !telephone.valid">El teléfono es obligatorio</span>
-	  </p>
-	  <input type="submit" value="Enviar" [disabled]="!registForm.form.valid">
+	  </p> -->
+	  <input type="submit" value="Enviar" ><!--[disabled]="!registForm.form.valid"-->
 	</form>
   
   

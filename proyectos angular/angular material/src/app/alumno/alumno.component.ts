@@ -5,6 +5,8 @@ import { userFicha } from "../modelos/user";
 import { posicion } from '../alumnos/alumnos.component';
 
 
+import {MatIconModule} from '@angular/material/icon';
+
 
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Observable} from 'rxjs';
@@ -23,6 +25,7 @@ import { MatCardModule } from '@angular/material/card';
 	providers: [UsersService],
 		standalone: true,
 	imports: [
+	  MatIconModule,
 	  FormsModule,
 	  MatFormFieldModule,
 	  MatInputModule,
