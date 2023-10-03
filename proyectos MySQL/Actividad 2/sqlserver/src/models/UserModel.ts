@@ -1,18 +1,22 @@
 import { DataTypes } from 'sequelize';
 import db from '../config/connectdb';
 
-const User = db.define('User',{
+const UserModel = db.define('User',{
     name: {
         type: DataTypes.STRING
     },
 	lastName: {
 		type: DataTypes.STRING
 	},
+    password: {
+        type: DataTypes.STRING
+    },
     birthDate: {
         type: DataTypes.DATE
     },
     email: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        unique: true
     },
     imagen: {
         type: DataTypes.STRING
@@ -25,8 +29,7 @@ const User = db.define('User',{
     },
 	isProfessor: {
 		type: DataTypes.BOOLEAN
-	}
-    ,
+	},
     registDate: {
         type: DataTypes.DATE
     },
@@ -39,4 +42,4 @@ const User = db.define('User',{
     createdAt: false,
     updatedAt: false
 });
- export default User;
+export default UserModel;

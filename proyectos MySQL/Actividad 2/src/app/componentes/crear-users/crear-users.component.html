@@ -1,0 +1,58 @@
+<div class="container mt-15">
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-body text-center">
+                  <span class="titulo">Registrate</span>
+                  <form class="mb-3" [formGroup]="userForm" (ngSubmit)="agregarUser()">
+                      <div class="mb-3">
+                          <input type="text" formControlName="nombre" class="form-control" placeholder="User">
+                          <div class="text-danger" *ngIf="userForm.get('nombre')?.hasError('required') && userForm.get('nombre')?.touched">
+                              <span>El nombre es obligatorio</span>
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <input type="text" formControlName="descripcion" class="form-control" placeholder="Descripción">
+                          <div class="text-danger" *ngIf="userForm.get('descripcion')?.hasError('required') && userForm.get('descripcion')?.touched">
+                              <span>La descripción es obligatoria</span>
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <input type="text" formControlName="categoria" class="form-control" placeholder="Categoría">
+                          <div class="text-danger" *ngIf="userForm.get('categoria')?.hasError('required') && userForm.get('categoria')?.touched">
+                              <span>La Categoría es obligatoria</span>
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <input type="text" formControlName="imagen" class="form-control" placeholder="Imagen">
+                          <div class="text-danger" *ngI="userForm.get('imagen')?.hasError('required') && userForm.get('imagen')?.touched">
+                              <span>La Imagen es obligatoria</span>
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <input type="number" formControlName="duracion" class="form-control" placeholder="Duración">
+                          <div class="text-danger" *ngIf="userForm.get('duracion')?.hasError('required') && userForm.get('duracion')?.touched">
+                              <span>La duración es obligatoria</span>
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <input type="text" formControlName="temas" class="form-control" placeholder="Temas">
+                          <div class="text-danger" *ngIf="userForm.get('temas')?.hasError('required') && userForm.get('temas')?.touched">
+                              <span>Los temas son obligatorios</span>
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
+                          <button type="submit" [disabled]="userForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<ul>
+    <li *ngFor="let subjet of asignedSubjets">
+        
+    </li>
+</ul>

@@ -1,6 +1,8 @@
 import {Request, Response} from 'express';
 import Admin from '../models/AdminModel';
 
+
+
 export const getAdmins = async (req: Request, res: Response) =>{
     const listAdmins = await Admin.findAll();
     res.json(listAdmins);
