@@ -26,8 +26,12 @@ const User = db.define('User',{
 	isProfessor: {
 		type: DataTypes.BOOLEAN
 	}
-    ,registDate: {
+    ,
+    registDate: {
         type: DataTypes.DATE
+    },
+    AsignedCourses: {
+        type: DataTypes.STRING
     }
     
 
@@ -36,5 +40,3 @@ const User = db.define('User',{
     updatedAt: false
 });
  export default User;
-
-
