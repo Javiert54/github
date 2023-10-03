@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { ReactiveFormsModule } from '@angular/forms';
+
 // Servicio - Modelo
 import { GUser } from '../../config/Modelos/guser';
 import { GuserService } from '../../config/Servicios/guser.service';  //¡Hay que añadir los servicios de GuserService
