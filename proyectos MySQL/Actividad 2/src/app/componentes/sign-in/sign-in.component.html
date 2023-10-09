@@ -1,0 +1,85 @@
+<div class="wrapper">
+    <div *ngIf="!loading" class="body">
+        <img class="logo" src="../../../assets/media/img/login.png" alt="img login">
+        <h3>Registrar Usuario</h3>
+        <div class="form-floating mb-3 mt-3">
+            <input type="text" [(ngModel)]="email" class="form-control" placeholder="Ingrese usuario">
+            <label>Usuario</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" [(ngModel)]="password" class="form-control" placeholder="Ingrese password">
+            <label>Password</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" [(ngModel)]="confirmPassword" class="form-control"
+                placeholder="Ingrese password de nuevo">
+            <label>Repetir Password</label>
+        </div>
+
+
+
+
+
+
+
+
+
+        <label class="form-floating mb-3" for="checkbox">¿Es un profesor? <input [(ngModel)]="isProfessor"
+                type="checkbox"></label>
+        <div class="form-floating mb-3" *ngIf="isProfessor">
+            <!-- <input type="text" [(ngModel)]="currentElement" [defaultValue]="'curso'+(cursosAsignados.length).toString()" (blur)="updateArray(focusElement)"> -->
+            <button (click)="addCurso()">Añadir curso</button>
+            <ul>
+                <li *ngFor="let curso of cursosAsignados">
+                    <!-- {{curso}} -->
+                    <input type="text" [defaultValue]="curso" id="id{{cursosAsignados.indexOf(curso)}}"
+                        (blur)="updateArray(cursosAsignados.indexOf(curso))">
+                </li>
+
+
+
+
+
+                <form class="example-form" *ngFor="let curso of cursosAsignados">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Assignee</mat-label>
+                      <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                        <mat-option *ngFor="let option of filteredOptions[cursosAsignados.indexOf(curso)] | async" [value]="option">
+                          {{option.name}}
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  </form>
+
+
+
+
+
+
+            </ul>
+
+        </div>
+        <app-addImageProfile></app-addImageProfile>
+        <div class="d-grid gap-2 mb-3">
+            <button type="button" (click)="addUser()" class="btn btn-primary btn-lg">Aceptar</button>
+        </div>
+        <a routerLink="/login">Volver</a>
+    </div>
+
+
+    
+    <!-- <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Assignee</mat-label>
+            <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option.name}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form> -->
+
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

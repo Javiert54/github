@@ -1,0 +1,15 @@
+.body{
+
+	align-items: center;
+
+	flex-direction: column;
+	justify-content: center;
+	display: flex; 
+}
+
+
+
+.form-control{
+	width:27em;
+	font-size: 13px;
+}

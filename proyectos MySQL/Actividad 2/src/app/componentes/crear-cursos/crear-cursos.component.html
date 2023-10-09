@@ -24,8 +24,8 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="text" formControlName="imagen" class="form-control" placeholder="Imagen">
-                            <div class="text-danger" *ngI="cursoForm.get('imagen')?.hasError('required') && cursoForm.get('imagen')?.touched">
+                            <input type="file" formControlName="imagen" class="form-control" placeholder="Imagen">
+                            <div class="text-danger" *ngIf="cursoForm.get('imagen')?.hasError('required') && cursoForm.get('imagen')?.touched">
                                 <span>La Imagen es obligatoria</span>
                             </div>
                         </div>
