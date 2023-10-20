@@ -1,0 +1,13 @@
+.fa-solid {
+    cursor: pointer;
+
+}
+.curso-card{
+    background-color: #e7e7e7;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em;
+}
+.card-body{
+    background-color: #ffffff;
+}

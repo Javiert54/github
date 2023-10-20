@@ -1,39 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
+// Componentes
+import { LoginComponent } from './components/login/login.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { AgregarArchivoComponent } from './components/agregar-archivo/agregar-archivo.component';
 
-
-import { AlumnoComponent } from './alumno/alumno.component';
-import { AlumnosComponent } from './alumnos/alumnos.component';
-import { CrearCursoComponent } from './crearCurso/crearCurso.component';
-import { CursoComponent } from './curso/curso.component';
-import { CursosComponent } from './cursos/cursos.component';
-import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso.component';
-import { FormularioConsultaComponent } from './formulario-consulta/formulario-consulta.component';
-import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
-import { ProfesorComponent } from './profesor/profesor.component';
-import { ProfesoresComponent } from './profesores/profesores.component';
-import { SelectComponent } from './select/select.component';
-
-
-
-
-
+// Guards
+import { AuthGuard } from './utils/auth.guard';
 
 
 const routes: Routes = [
-  {path: "select", component:SelectComponent},
-  {path: "alumno", component:AlumnoComponent},
-  {path: "alumnos", component:AlumnosComponent},
-  {path: "curso", component:CursoComponent},
-  {path: "cursos", component:CursosComponent},
-  {path: "acceso", component:FormularioAccesoComponent},
-  {path: "consulta", component:FormularioConsultaComponent},
-  {path: "registro", component:FormularioRegistroComponent},
-  {path: "profesor", component:ProfesorComponent},
-  {path: "profesores", component:ProfesoresComponent},
-  {path: "crearCurso", component:CrearCursoComponent}
-
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'signIn', component: SignInComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'archivos', component: AgregarArchivoComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'archivos', component: AgregarArchivoComponent },
+  { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];
 
 @NgModule({

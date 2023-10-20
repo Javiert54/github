@@ -1,0 +1,49 @@
+<div class="container mt-15">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">{{ titulo | uppercase }}</span>
+                    <form class="mb-3" [formGroup]="contactoForm" (ngSubmit)="agregarUsuario()">
+                        <div class="mb-3">
+                            <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
+                            <div class="text-danger" *ngIf="contactoForm.get('nombre')?.hasError('required') && contactoForm.get('nombre')?.touched">
+                                <span>El nombre es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="email" class="form-control" placeholder="Email">
+                            <div class="text-danger" *ngIf="contactoForm.get('email')?.hasError('required') && contactoForm.get('email')?.touched">
+                                <span>El email es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="telefono" class="form-control" placeholder="Teléfono">
+                            <div class="text-danger" *ngIf="contactoForm.get('telefono')?.hasError('required') && contactoForm.get('telefono')?.touched">
+                                <span>El teléfono es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="asunto" class="form-control" placeholder="Asunto">
+                            <div class="text-danger" *ngIf="contactoForm.get('asunto')?.hasError('required') && contactoForm.get('asunto')?.touched">
+                                <span>El asunto es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea type="text" formControlName="textomensaje" class="form-control" placeholder="Mensaje" cols="50" rows="10"></textarea>
+                            <div class="text-danger" *ngIf="contactoForm.get('textomensaje')?.hasError('required') && contactoForm.get('textomensaje')?.touched">
+                                <span>El mensaje es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
+                            <button type="submit" [disabled]="contactoForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+

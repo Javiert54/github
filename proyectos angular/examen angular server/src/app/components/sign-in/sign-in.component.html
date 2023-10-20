@@ -1,0 +1,37 @@
+<div class="wrapper">
+    <div *ngIf="!loading" class="body">
+        <img class="logo" src="../../../assets/media/img/login.png" alt="img login">
+        <h3>Registrar Usuario</h3>
+        <div class="form-floating mb-3 mt-3">
+            <input type="text" [(ngModel)]="username" class="form-control" placeholder="Ingrese usuario">
+            <label>Usuario</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" [(ngModel)]="password" class="form-control" placeholder="Ingrese password">
+            <label>Password</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" [(ngModel)]="confirmPassword" class="form-control" placeholder="Ingrese password de nuevo">
+            <label>Repetir Password</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="checkbox" [(ngModel)]="isProfessor"><span> Registrarse como profesor?</span>
+        </div>
+        <div *ngIf="isProfessor">
+            <button (click)="addSubject()">Asignar otra asignatura</button>
+            <ul>
+                <li *ngFor="let asignedSubject of asignedSubjects">
+                    <select name="select" id=(asignedSubjects.indexOf(asignedSubject)).toString() (change)="updateArray(asignedSubject)" [(ngModel)]="this.asignedSubjects[ this.asignedSubjects.indexOf(asignedSubject)]">
+                        <option *ngFor="let option of options[asignedSubjects.indexOf(asignedSubject)]" [ngValue] = option >{{option.name}}</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="d-grid gap-2 mb-3">
+            <button type="button" (click)="addUser()" class="btn btn-primary btn-lg">Aceptar</button>
+        </div>
+        <a routerLink="/login">Volver</a>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>
