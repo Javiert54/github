@@ -1,0 +1,1 @@
+{"version":3,"file":"GMensaje.js","sourceRoot":"","sources":["../../../../../src/app/models/GMensaje.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,QAAQ;IAMpB,YAAY,MAAc,EAAE,KAAa,EAAE,QAAgB,EAAE,MAAc,EAAE,YAAoB;QAC1F,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;QACrB,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC;QACnB,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;QACrB,IAAI,CAAC,OAAO,GAAG,YAAY,CAAC;IAChC,CAAC;CACJ"}
